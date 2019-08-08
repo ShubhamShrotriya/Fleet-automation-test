@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class FleetTests.AssetTrack.StartAssetTracking</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class FleetTests.AssetTrack.StartAssetTracking</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/FleetTests.AssetTrack.html">FleetTests.AssetTrack</a> &gt; StartAssetTracking</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">2.216s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">AssetTracking</td>
+<td class="success">2.216s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>https://aveesha-fleet-api.vogo.tech/api/v1
+HTTP/1.1 404 Not Found
+Date: Thu, 08 Aug 2019 06:36:22 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: nginx
+X-Frame-Options: SAMEORIGIN
+Vary: Cookie
+Content-Encoding: gzip
+
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot;/&gt;
+    &lt;title&gt;Page not found at /api/v1/api/v1/asset/start/&lt;/title&gt;
+    &lt;meta name=&quot;robots&quot; content=&quot;NONE,NOARCHIVE&quot;/&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+    html * { padding:0; margin:0; }
+    body * { padding:10px 20px; }
+    body * * { padding:0; }
+    body { font:small sans-serif; background:#eee; color:#000; }
+    body&amp;gt;div { border-bottom:1px solid #ddd; }
+    h1 { font-weight:normal; margin-bottom:.4em; }
+    h1 span { font-size:60%; color:#666; font-weight:normal; }
+    table { border:none; border-collapse: collapse; width:100%; }
+    td, th { vertical-align:top; padding:2px 3px; }
+    th { width:12em; text-align:right; color:#666; padding-right:.5em; }
+    #info { background:#f6f6f6; }
+    #info ol { margin: 0.5em 4em; }
+    #info ol li { font-family: monospace; }
+    #summary { background: #ffc; }
+    #explanation { background:#eee; border-bottom: 0px none; }
+  &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;summary&quot;&gt;
+      &lt;h1&gt;
+Page not found         &lt;span&gt;(404)&lt;/span&gt;
+      &lt;/h1&gt;
+      &lt;table class=&quot;meta&quot;&gt;
+        &lt;tr&gt;
+          &lt;th colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;Request Method:&lt;/th&gt;
+          &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;POST&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;Request URL:&lt;/th&gt;
+          &lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;https://aveesha-fleet-api.vogo.tech/api/v1/api/v1/asset/start/&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;info&quot;&gt;
+      &lt;p&gt;
+
+      Using the URLconf defined in         &lt;code&gt;api.urls&lt;/code&gt;
+,
+      Django tried these URL patterns, in this order:
+            &lt;/p&gt;
+      &lt;ol&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^health-check/$
+                [name='misc-health-check']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^image-upload/$
+                [name='misc-image-uploads-meta']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^init/$
+                [name='misc-init']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^hw-init/$
+                [name='misc-init-hw-app']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^accounts/login/$
+                [name='accounts-login']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^accounts/profile/$
+                [name='accounts-profile']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^accounts/verify/$
+                [name='accounts-verify']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^cities/$
+                [name='cities-list']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^cities/(?P&amp;lt;pk&amp;gt;[^/.]+)/$
+                [name='cities-detail']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^clusters/$
+                [name='clusters-list']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^clusters/(?P&amp;lt;pk&amp;gt;[^/.]+)/$
+                [name='clusters-detail']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^subclusters/$
+                [name='subclusters-list']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^subclusters/(?P&amp;lt;pk&amp;gt;[^/.]+)/$
+                [name='subclusters-detail']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^offers/$
+                [name='offers-list']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^offers/auto-apply-coupon/$
+                [name='offers-auto-apply-coupon']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^offers/validate-coupon/$
+                [name='offers-validate-coupon']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^stations/$
+                [name='stations-list']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^stations/available-inventory/$
+                [name='stations-available-inventory']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^stations/coordinates/$
+                [name='stations-coordinates']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^stations/end-reservation/$
+                [name='stations-end-reservation']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^stations/end-ride/$
+                [name='stations-end-ride']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^stations/fare-estimate/$
+                [name='stations-fare-estimate']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^stations/reassign-otp/$
+                [name='stations-reassign-otp']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^stations/reassign-otp-with-hoop/$
+                [name='stations-reassign-otp-with-hoop']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^stations/reassign-vehicle/$
+                [name='stations-reassign-vehicle']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^stations/release-unit/$
+                [name='stations-release-unit']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^stations/reserve-unit/$
+                [name='stations-reserve-unit']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^stations/update-cluster-counter/$
+                [name='stations-update-cluster-counter']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^stations/user-sub-clusters/$
+                [name='stations-user-sub-clusters']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^stations/user-sub-clusters-all/$
+                [name='stations-user-sub-clusters-all']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^stations/(?P&amp;lt;pk&amp;gt;[^/.]+)/$
+                [name='stations-detail']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^stations/(?P&amp;lt;pk&amp;gt;[^/.]+)/block-unit/$
+                [name='stations-block-unit']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^stations/(?P&amp;lt;pk&amp;gt;[^/.]+)/confirm-unit/$
+                [name='stations-confirm-unit']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^stations/(?P&amp;lt;pk&amp;gt;[^/.]+)/create-ride/$
+                [name='stations-create-ride']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^stations/(?P&amp;lt;pk&amp;gt;[^/.]+)/vehicles/$
+                [name='stations-vehicles']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^returns/$
+                [name='returns-list']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^returns/(?P&amp;lt;pk&amp;gt;[^/.]+)/$
+                [name='returns-detail']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^returns/(?P&amp;lt;pk&amp;gt;[^/.]+)/complete/$
+                [name='returns-complete']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^returns/(?P&amp;lt;pk&amp;gt;[^/.]+)/generate-otp/$
+                [name='returns-generate-otp']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^refuels/$
+                [name='refueling-list']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^refuels/feed-predicted-refueling-list/$
+                [name='refueling-feed-predicted-refueling-list']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^refuels/(?P&amp;lt;pk&amp;gt;[^/.]+)/$
+                [name='refueling-detail']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^refuels/(?P&amp;lt;pk&amp;gt;[^/.]+)/complete/$
+                [name='refueling-complete']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^refuels/(?P&amp;lt;pk&amp;gt;[^/.]+)/start/$
+                [name='refueling-start']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^asset/start/$
+                [name='asset_tracking-start']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^asset/vehicle_not_asset_tracked/$
+                [name='asset_tracking-vehicle-not-asset-tracked']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^asset/(?P&amp;lt;pk&amp;gt;[^/.]+)/complete/$
+                [name='asset_tracking-complete']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^rebalancing/$
+                [name='rebalancing-list']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^rebalancing/ongoing/$
+                [name='rebalancing-ongoing']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^rebalancing/(?P&amp;lt;pk&amp;gt;[^/.]+)/complete/$
+                [name='rebalancing-complete']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^rebalancing/(?P&amp;lt;pk&amp;gt;[^/.]+)/generate-otp/$
+                [name='rebalancing-generate-otp']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^rebalancing/(?P&amp;lt;pk&amp;gt;[^/.]+)/start/$
+                [name='rebalancing-start']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^audit/create_audit/$
+                [name='auditing-create-audit']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^audit/vehicles/$
+                [name='auditing-vehicles']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^audit/(?P&amp;lt;pk&amp;gt;[^/.]+)/complete/$
+                [name='auditing-complete']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^audit/(?P&amp;lt;pk&amp;gt;[^/.]+)/generate-otp/$
+                [name='auditing-generate-otp']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^retrieval/complete/$
+                [name='retrieval-complete']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^retrieval/ongoing/$
+                [name='retrieval-ongoing']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^retrieval/reasons/$
+                [name='retrieval-reasons']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^retrieval/start/$
+                [name='retrieval-start']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^retrieval/vehicles/$
+                [name='retrieval-vehicles']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^vehicles/add-qr-info/$
+                [name='vehicles-add-qr-info']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^vehicles/booking-details/$
+                [name='vehicles-booking-details']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^vehicles/bulk/$
+                [name='vehicles-bulk']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^vehicles/cancel-reservation/$
+                [name='vehicles-cancel-reservation']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^vehicles/create-feedback/$
+                [name='vehicles-create-feedback']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^vehicles/create-vehicle-geolocation/$
+                [name='vehicles-create-vehicle-geolocation']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^vehicles/generate_vehicle_otp/$
+                [name='vehicles-generate-vehicle-otp']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^vehicles/current-status/$
+                [name='vehicles-get-current-status']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^vehicles/get-location/$
+                [name='vehicles-get-location']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^vehicles/get-qr-info/$
+                [name='vehicles-get-qr-info']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^vehicles/immobilizer/$
+                [name='vehicles-immobilizer']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^vehicles/iot-data/$
+                [name='vehicles-iot-data']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^vehicles/upload-ola-data-to-s3/$
+                [name='vehicles-ola-data-to-s3']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^vehicles/state/$
+                [name='vehicles-state']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^vehicles/update-km-reading/$
+                [name='vehicles-update-km-reading']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^vehicles/(?P&amp;lt;pk&amp;gt;[^/.]+)/qr-verification/$
+                [name='vehicles-qr-verification']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^vehicle-attendance/$
+                [name='vehicle_attendance-list']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^vehicle-status-log/$
+                [name='vehicle_status-log-list']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^vehicle-status-log/(?P&amp;lt;pk&amp;gt;[^/.]+)/$
+                [name='vehicle_status-log-detail']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^vehicle-damage-types/$
+                [name='vehicle-damage-types-list']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^vehicle-damage-types/(?P&amp;lt;pk&amp;gt;[^/.]+)/$
+                [name='vehicle-damage-types-detail']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^vehicle-status-change-reasons/$
+                [name='vehicle-status-change-reasons-list']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^vehicle-status-change-reasons/(?P&amp;lt;pk&amp;gt;[^/.]+)/$
+                [name='vehicle-status-change-reasons-detail']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^box-relaunch/$
+                [name='box-relaunch-list']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^box-relaunch/block-vehicle/$
+                [name='box-relaunch-block-vehicle']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^box-relaunch/release-vehicle/$
+                [name='box-relaunch-release-vehicle']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/box-info/$
+                [name='launchpad-box-info']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/box-vehicle-mapping/$
+                [name='launchpad-box-vehicle-mapping']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/create-fuse/$
+                [name='launchpad-create-fuse']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/create-box/$
+                [name='launchpad-createbox']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/fuse-pairing/$
+                [name='launchpad-fuse-pairing']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/fuse-unpairing/$
+                [name='launchpad-fuse-unpairing']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/fuses/$
+                [name='launchpad-fuses']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/generate-new-fuse-otp/$
+                [name='launchpad-generate-new-fuse-otp']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/generate-new-otp/$
+                [name='launchpad-generatenewotp']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/get-device-info/$
+                [name='launchpad-get-device-info']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/get-info-box/$
+                [name='launchpad-get-info-box']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/get-location-bike/$
+                [name='launchpad-get-location-bike']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/get-location-imei/$
+                [name='launchpad-get-location-imei']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/get-mac-addr/$
+                [name='launchpad-get-mac-addr']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/get-pairing-vehicles/$
+                [name='launchpad-get-pairing-vehicles']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/get-vehicles-by-mac/$
+                [name='launchpad-get-vehicles-by-mac']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/get-box-vehicle/$
+                [name='launchpad-getboxvehicle']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/get-lab-params/$
+                [name='launchpad-getlabparams']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/immobilize-vehicle/$
+                [name='launchpad-immobilize-vehicle']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/incorrect-location-bikes/$
+                [name='launchpad-incorrect-location-bikes']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/mark-location-status/$
+                [name='launchpad-mark-location-active-inactive']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/pair-device/$
+                [name='launchpad-pair-device']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/unpair-device/$
+                [name='launchpad-unpair-device']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/update-fuse-data/$
+                [name='launchpad-update-fuse-data']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^launchpad/(?P&amp;lt;pk&amp;gt;[^/.]+)/pairing/$
+                [name='launchpad-pairing']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^servicing/$
+                [name='servicing-list']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^servicing/store-servicing-data/$
+                [name='servicing-store-servicing-data']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^oof/$
+                [name='oof-list']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^oof/scan/$
+                [name='oof-scan-vehicle']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^oof/update-event/$
+                [name='oof-update-event']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^oof/(?P&amp;lt;reference_id&amp;gt;[^/.]+)/$
+                [name='oof-detail']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^oof/(?P&amp;lt;reference_id&amp;gt;[^/.]+)/end-ride/$
+                [name='oof-end-ride-request']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^oof/(?P&amp;lt;reference_id&amp;gt;[^/.]+)/regenerate-otp/$
+                [name='oof-regenerate-otp']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^oof/(?P&amp;lt;reference_id&amp;gt;[^/.]+)/return/$
+                [name='oof-return-token']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^oof/(?P&amp;lt;reference_id&amp;gt;[^/.]+)/modify/$
+                [name='oof-update-ride-request']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^oof/(?P&amp;lt;reference_id&amp;gt;[^/.]+)/upload-proof/$
+                [name='oof-upload-proof']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^attendance/add-overtime/$
+                [name='attendance-add-overtime']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^attendance/change-shift-detail/$
+                [name='attendance-change-shift-detail']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^attendance/fetch-shift-detail/$
+                [name='attendance-fetch-shift-detail']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^attendance/punch-in/$
+                [name='attendance-punch-in']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^attendance/punch-out/$
+                [name='attendance-punch-out']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^attendance/radar-data/$
+                [name='attendance-radar-data']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^reports/v5/$
+                [name='reports-v5-events']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^reports/search-v5/$
+                [name='reports-v5-search']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^fw-updater/updates/$
+                [name='fw-updater-updates']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^quality-control/deployment/$
+                [name='quality-control-create-entry']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^mechanics/$
+                [name='mechanic-list']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^mechanics/init/$
+                [name='mechanic-init']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^mechanics/release-blocked-ongoing-job/$
+                [name='mechanic-release-blocked-ongoing-job']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^mechanics/(?P&amp;lt;pk&amp;gt;[^/.]+)/$
+                [name='mechanic-detail']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^mechanics/(?P&amp;lt;pk&amp;gt;[^/.]+)/complete/$
+                [name='mechanic-complete']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^mechanics/(?P&amp;lt;pk&amp;gt;[^/.]+)/issue/$
+                [name='mechanic-issue']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^mechanics/(?P&amp;lt;pk&amp;gt;[^/.]+)/reassign/$
+                [name='mechanic-reassign']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^mechanics/(?P&amp;lt;pk&amp;gt;[^/.]+)/report/$
+                [name='mechanic-report']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^mechanics/(?P&amp;lt;pk&amp;gt;[^/.]+)/spare-part/$
+                [name='mechanic-spare-part']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^mechanics/(?P&amp;lt;pk&amp;gt;[^/.]+)/start/$
+                [name='mechanic-start']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^spare-parts/$
+                [name='spare-part-list']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^spare-parts/init/$
+                [name='spare-part-init']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^spare-parts/modify/$
+                [name='spare-part-modify']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^spare-parts/replace/$
+                [name='spare-part-replace']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^spare-parts/request/$
+                [name='spare-part-request']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^qa-debug/modify-data/$
+                [name='qa-modify-data']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                api/v1/
+                
+            
+                ^qa-debug/retrieve-data/$
+                [name='qa-retrieve-data']
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                A92DFFBB6B9EC/vogo-admin/
+                
+            
+          &lt;/li&gt;
+        &lt;li&gt;
+            
+                ^docs/A92DFFBB6B9EC/
+                
+            
+          &lt;/li&gt;
+      &lt;/ol&gt;
+      &lt;p&gt;
+
+        
+        The current path,         &lt;code&gt;api/v1/api/v1/asset/start/&lt;/code&gt;
+, didn't match any of these.
+            &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;explanation&quot;&gt;
+      &lt;p&gt;
+
+      You're seeing this error because you have         &lt;code&gt;DEBUG = True&lt;/code&gt;
+ in
+      your Django settings file. Change that to         &lt;code&gt;False&lt;/code&gt;
+, and Django
+      will display a standard 404 page.
+          &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 4.10.3</a> at 08-Aug-2019 12:06:53</p>
+</div>
+</div>
+</body>
+</html>

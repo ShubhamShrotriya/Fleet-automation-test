@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="functionalTestSuite">
+    <test name="functionalTest">
+        <packages>
+            <!--Before running this make sure that user is new user(who has not linked the google account)-->
+            <package name="FleetTests.Accounts"/>
+            <package name="FleetTests.AssetTrack"/>
+        </packages>
+    </test>
+</suite>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FleetTests.Accounts.VerifyLogin" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-08-08T06:36:11" hostname="Vogos-MacBook-Pro.local" time="6.264">
+  <properties/>
+  <testcase name="verify_login[0](6361859543)" classname="FleetTests.Accounts.VerifyLogin" time="4.672"/>
+  <testcase name="verify_login[1](7019639205)" classname="FleetTests.Accounts.VerifyLogin" time="1.592"/>
+  <system-out><![CDATA[Control in Login
+https://aveesha-fleet-api.vogo.tech/api/v1
+HTTP/1.1 200 OK
+Date: Thu, 08 Aug 2019 06:36:16 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: nginx
+Allow: POST
+X-Frame-Options: SAMEORIGIN
+Content-Encoding: gzip
+
+{
+    "message": "OTP sent"
+}
+Control in Login
+https://aveesha-fleet-api.vogo.tech/api/v1
+HTTP/1.1 400 Bad Request
+Date: Thu, 08 Aug 2019 06:36:17 GMT
+Content-Type: application/json
+Content-Length: 82
+Connection: keep-alive
+Server: nginx
+Allow: POST
+X-Frame-Options: SAMEORIGIN
+
+{
+    "error_code": "ERR_4032",
+    "detail": "User not registered. Please check with admin."
+}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
