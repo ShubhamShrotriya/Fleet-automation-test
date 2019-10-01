@@ -32,11 +32,14 @@ repositories {
 }
 
 test {
-    useTestNG(){
+    useTestNG {
         useDefaultListeners = true
-        suites 'src/test/java/Suite.xml'
+//        suites 'src/test/java/Suite.xml'
+        systemProperties project.properties.subMap(["Environment", "Token", "App"])
+        systemProperties project.properties.subMap(["Environment", "AccessTrackId", "App"])
     }
 }
+
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'

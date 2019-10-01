@@ -1,0 +1,6 @@
+"latitude","longitude","current_km_reading","image_url","is_iot_box_working","is_otp_working","helmet_count","is_document_available","fuel_level","is_vehicle_damaged",damage_reason_list,"fine_amount","id","imageUrl","isSelected","name"
+"12.911965232333293","77.65163523430478","1198", "https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/8224ee18-711d-4aab-8bbb-f09b9f104ad7.jpeg","true","true","1","true","6","true","","500","14","https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/10819548-87fc-4ee3-ad07-f534f96ea761.webp","true","Break-down"
+
+
+
+

@@ -1,8 +1,10 @@
 package Utilities;
 
-import com.google.common.base.Strings;
 import com.google.gson.Gson;
 import com.opencsv.CSVReader;
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -11,13 +13,17 @@ import java.util.HashMap;
 import java.util.List;
 
 import static Utilities.FileUtils.FilePathCSV;
+import static io.restassured.RestAssured.given;
 
 public class TestHelper {
+
+    private static String AssetTrackId;
 
     //CSV READER METHOD
     //***************************************************************************************************************
 
-    public static void main(Strings args[]) {
+    public static void main(String args[])
+    {
         getHashListForDataPath(FilePathCSV);
     }
 
@@ -71,4 +77,84 @@ public class TestHelper {
 
 
     }
+
+
+    //*********************************************************************************************************************
+    //Method For Asset TrackingId
+
+    public static void trackingid(String AssetTrackBody) throws Exception {
+        //"/accounts/login/"
+       // System.out.println(AssetTrackForId.trackingid());
+
+
+        System.out.println("Control in AssetTrackForId");
+        RestAssured.baseURI= Constants.stageFleetBaseURL;
+        System.out.println(RestAssured.baseURI);
+        //System.out.println("AssetTrackBody"+AssetTrackBody);
+        HttpsUtils HU = new HttpsUtils();
+
+        Response response = given().
+                headers(HU.constantHeaders()).headers(HU.updateHeaders("Authorization","Token 40516d19401336f8efd574405fe8953629d6f3fd")).
+                body(AssetTrackBody).contentType(ContentType.JSON).
+
+                when().post("/asset/");
+        response.then().log().all();
+
+        System.out.println("Headers is "+HU.headers);
+        int actual_status_code=response.getStatusCode();
+        System.out.println(actual_status_code +" " + " " +  Constants.successcode);
+      //  Assert.assertEquals(actual_status_code, Constants.successcode);
+
+        String responseBody = response.asString();
+        System.out.println(responseBody);
+
+        AssetTrackId= HttpsUtils.ParseJSON(responseBody,"id");
+        System.setProperty("AssetTrackId",AssetTrackId);
+        System.out.println(AssetTrackId);
+
+
+
+
+
+    }
+
+/*
+    public static void writeDataLineByLine(String filePath)
+    {
+        // first create file object for file placed at location
+        // specified by filepath
+        File file = new File(filePath);
+        try {
+            // create FileWriter object with file as parameter
+            FileWriter outputfile = new FileWriter(file);
+
+            // create CSVWriter object filewriter object as parameter
+            CSVWriter writer = new CSVWriter(outputfile);
+
+           // "latitude","longitude","qr_identifier"
+            //"12.911965232333293","77.65163523430478","Z28YRJZ"
+
+            // adding header to csv
+            String[] header = { "latitude","longitude","qr_identifier" };
+            writer.writeNext(header);
+
+            //ABC ab = new ABC();
+
+            // add data to csv
+            String[] data1 = { "12.911965232333293","77.65163523430478", ABC.qr_identifier };
+            writer.writeNext(data1);
+           // String[] data2 = { "Suraj", "10", "630" };
+            //writer.writeNext(data2);
+
+            // closing writer connection
+            writer.close();
+            System.out.println("file is written you can check");
+        }
+        catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+*/
+
 }

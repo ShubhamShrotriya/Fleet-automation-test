@@ -1,27 +1,16 @@
 package FunctionTestModels.Accounts;
 
+import com.google.gson.annotations.SerializedName;
+
 public class CreateLogin {
 
-    //private String mobile_num;
-        private  String mobile;
 
 
-//public String getMobile_num() {
-//		return mobile_num;
-//	}
-//
-//
-//	public void setMobile_num(String mobile_num) {
-//		this.mobile_num = mobile_num;
-//	}
-//
-//
-//	public String getMobile() {
-//		return mobile;
-//	}
+    @SerializedName("mobile")
+    public String mobile;
 
 
-        public String getMobile() {
+    public String getMobile() {
             return mobile;
         }
 
@@ -30,11 +19,6 @@ public class CreateLogin {
             this.mobile = mobile;
         }
 
-
-//public void setmobile_num(String mobile_num)
-//
-//{this.mobile_num=mobile_num;
-//}
 
     }
 

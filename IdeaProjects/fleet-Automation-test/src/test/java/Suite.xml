@@ -2,10 +2,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="functionalTestSuite">
     <test name="functionalTest">
-        <packages>
+        <classes>
             <!--Before running this make sure that user is new user(who has not linked the google account)-->
-            <package name="FleetTests.Accounts"/>
-            <package name="FleetTests.AssetTrack"/>
-        </packages>
+            <class name="FleetTests.Accounts.VerifyLogin"/>
+            <class name="FleetTests.Accounts.VerifyOTP"/>
+            <class name="FleetTests.Accounts.verifyProfile"/>
+            <class name="FleetTests.AssetTrack.AssetTrackForId"/>
+            <class name="FleetTests.AssetTrack.StartAssetTracking"/>
+            <class name="FleetTests.AssetTrack.ZCompleteAssetTrack"/>
+            <class name="FleetTests.Attendance.PunchIn"/>
+            <class name="FleetTests.Attendance.AddOvertime"/>
+            <class name="FleetTests.Attendance.Summary"/>
+        </classes>
     </test>
 </suite>

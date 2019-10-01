@@ -3,9 +3,10 @@ package FleetTests.Accounts;
 import FunctionTestModels.Accounts.CreateLogin;
 import Utilities.Constants;
 import Utilities.HttpsUtils;
+import Utilities.TestHelper;
 import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -14,59 +15,29 @@ import static io.restassured.RestAssured.given;
 public class VerifyLogin {
 
 
-        //@Test
-        public static void verifylogin()
-        {
-            //"/accounts/login/"
-
-            CreateLogin CL = new CreateLogin();
-            CL.setMobile("6361859543");
-            RestAssured.baseURI= Constants.AveeshaFleetBaseURL;
-            System.out.println(RestAssured.baseURI);
-
-            Response response = given().header("X-App-Version", "29").header("ContentType", "application/json").
-
-                    body(CL).contentType(ContentType.JSON)
-
-                    .when().post("/accounts/login/");
-            response.then().log().all();
-
-
-
-
-
-        }
-//*******************************************************************************
-
     @DataProvider(name = "dataForLogin")
-    public Object[][] dataForLogin(){
-            return new Object[][]{
-                    {"6361859543"},
-                    {"7019639205"}
-            };
+    public Object[][] dataForLoginmethod()
+    {
+        return TestHelper.getDataForDataProvider("/Users/vogo/IdeaProjects/fleet-Automation-test/src/main/resources/TestData/verfiycopy.csv",CreateLogin.class);
     }
 
     @Test(dataProvider = "dataForLogin")
-    public static void verify_login(String number)
+    public static void verify_login(String loginRequestBody)
     {
-        //"/accounts/login/"
 
         System.out.println("Control in Login");
-
-        CreateLogin CL = new CreateLogin();
-        CL.setMobile(number);
-        RestAssured.baseURI= Constants.AveeshaFleetBaseURL;
+        RestAssured.baseURI= Constants.stageFleetBaseURL;
         System.out.println(RestAssured.baseURI);
+        System.out.println(loginRequestBody);
 
-        HttpsUtils HU = new HttpsUtils();
 
         Response response = given().
-                headers(HU.constantHeaders()).
-
-                body(CL).contentType(ContentType.JSON)
-
-                .when().post("/accounts/login/");
-        response.then().log().all();
+                headers(new HttpsUtils().constantHeaders()).body(loginRequestBody).
+                when().post("/accounts/login/");
+        response.then();
+        int actual_status_code=response.getStatusCode();
+        Assert.assertEquals(actual_status_code, Constants.successcode);
+       // Assert.assertEquals(response.toString(), "OTP sent");
 
 
 

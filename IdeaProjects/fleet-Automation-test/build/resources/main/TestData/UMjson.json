@@ -1,0 +1,21 @@
+{
+  "latitude": 12.911965232333293,
+  "longitude": 77.65163523430478,
+  "current_km_reading": "1301",
+  "image_url": "https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/38f7e341-da7c-4c70-b2c1-c35d6a070ee0.jpeg",
+  "is_iot_box_working": true,
+  "is_otp_working": true,
+  "helmet_count": 2,
+  "is_document_available": true,
+  "fuel_level": "6",
+  "is_vehicle_damaged": true,
+  "damage_reason_list": [
+    {
+      "fine_amount": 500,
+      "id": 14,
+      "imageUrl": "https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/10819548-87fc-4ee3-ad07-f534f96ea761.webp",
+      "isSelected": true,
+      "name": "Break-down"
+    }
+  ]
+}

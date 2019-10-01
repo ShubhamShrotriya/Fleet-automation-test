@@ -9,7 +9,7 @@ public class OtpLogin {
 
 
     @SerializedName("otp")
-    public String Otp;
+    public String otp;
 
     @SerializedName("mobile")
     public String mobile;
@@ -19,11 +19,11 @@ public class OtpLogin {
     }
 
     public String getOtp() {
-        return Otp;
+        return otp;
     }
 
     public void setOtp(String otp) {
-        Otp = otp;
+        this.otp = otp;
     }
 
     public void setMobile(String mobile) {

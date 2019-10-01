@@ -6,11 +6,19 @@ package Utilities;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import io.restassured.response.Response;
 
+import java.io.FileReader;
 import java.util.HashMap;
 
 public class HttpsUtils
-   {
+{
+        public static FileReader reader;
+        //public static HashMap<String, String> headers = new HashMap<>();
+      //  public static HashMap<String, String> fleetHeaders = new HashMap<>();
+        private static String jsonString;
+        private static Response response;
+
 //        public static FileReader reader;
      public  HashMap<String, String> headers = new HashMap<>();
       public  HashMap<String, String> fleetHeaders = new HashMap<>();
@@ -28,26 +36,24 @@ public HashMap<String, String> updateHeaders(String key, String value) {
     PropertiesFile prop = new PropertiesFile();
     access_token=prop.accesstoken;
     headers.put(key, value);
-
+    //headers.put("Authorization", "40516d19401336f8efd574405fe8953629d6f3fd");
 return headers;
-              // headers.put("Authorization", "55dc6737f5913a587675f7942c7ba793e83670de"
+
                       // headers.put(key, value);
         }
 
 
        public HashMap<String, String> constantHeaders() {
 
-//           PropertiesFile prop = new PropertiesFile();
-//           access_token=prop.accesstoken;
            headers.put("X-App-Version", "29");
-           headers.put("ContentType", "application/json");
+           headers.put("Content-Type", "application/json");
 
            return headers;
 
        }
 
 
-       public void  ParseJSON(String response, String AttributeName )
+       public static String ParseJSON(String response, String AttributeName)
 
            {
          //  static String json = "...";
@@ -62,6 +68,28 @@ return headers;
 //               for (int i = 0; i < arr.size(); i++) {
 //                   String post_id = arr.get(i).getAsJsonObject().get("post_id").getAsString();
 //                   System.out.println(post_id);
-               }
+               return Value;
+           }
+
+//            public static Response callGetListOfVehicles(String BaseURL, long stationId) {
+//       RestAssured.baseURI = BaseURL;
+//       response = given().headers(fleetHeaders).when().get(Constants.stations + stationId + "/" + Constants.vehicles);
+//       return response;
+//   }
+//
+//
+//    //public static void updateFleetHeaders(String key, String value) {
+//        fleetHeaders.put(key, value);
+//    }
+
+
+//
+//    public static void updateHeadersForFleet() {
+//        HttpUtils.updateFleetHeaders("X-App-x", Constants.fleetAndroid);
+//        HttpUtils.updateFleetHeaders("X-App-Version", Constants.fleetVersion);
+//        HttpUtils.updateFleetHeaders("Content-Type", Constants.contentType);
+//        HttpUtils.updateFleetHeaders("Authorization", "Token " + Constants.fleetStageAccessToken);
+//        System.out.println(fleetHeaders);
+//    }
            }
 

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite hostname="Vogos-MacBook-Pro.local" name="FleetTests.Accounts.VerifyLogin" tests="5" failures="0" timestamp="8 Aug 2019 06:36:28 GMT" time="11.76" errors="0">
-  <testcase name="verify_login" time="4.672" classname="FleetTests.Accounts.VerifyLogin"/>
-  <testcase name="verify_login" time="1.592" classname="FleetTests.Accounts.VerifyLogin"/>
-  <testcase name="verify_otp" time="1.794" classname="FleetTests.Accounts.VerifyOTP"/>
-  <testcase name="verifyProfile" time="1.473" classname="FleetTests.Accounts.verifyProfile"/>
-  <testcase name="AssetTracking" time="2.216" classname="FleetTests.AssetTrack.StartAssetTracking"/>
-</testsuite>
