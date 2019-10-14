@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FleetTests.Stations.Stations" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-10-09T08:42:41" hostname="Vogos-MacBook-Pro.local" time="3.035">
+  <properties/>
+  <testcase name="StationsDetails" classname="FleetTests.Stations.Stations" time="1.546"/>
+  <testcase name="StationsDetails_IncorrectId" classname="FleetTests.Stations.Stations" time="1.488"/>
+  <system-out><![CDATA[40516d19401336f8efd574405fe8953629d6f3fd
+Control in Stations Details 
+https://stage-fleet-api.vogo.tech/api/v1
+io.restassured.internal.RestAssuredResponseImpl@3e90947d
+40516d19401336f8efd574405fe8953629d6f3fd
+Control in Stations Details incorrect station id
+https://stage-fleet-api.vogo.tech/api/v1
+io.restassured.internal.RestAssuredResponseImpl@511ea9ac
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

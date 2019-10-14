@@ -7,9 +7,10 @@ public class Constants {
 
 
     public static int  failurecode =400;
-
+    public static int failurecode_unsupported_media=415;
     public static int  failurecode_appCheck =500;
     public static int  Failure_unauthorizedUser =401;
+    public static int failurecode_IncorrectEndPoint=404;
     //Failure_unauthorizedUser
    // failurecode_appCheck
 
@@ -25,6 +26,8 @@ public class Constants {
 
     public static String station_id="1021";
 
+
+
     //AVAILABLE_FOR_BOOKING
    // public static final String AVAILABLE_FOR_BOOKING = "UNDER_BOOKING";
     public static final String AVAILABLE_FOR_BOOKING = "AVAILABLE_FOR_BOOKING";
@@ -36,6 +39,7 @@ public class Constants {
     public static final String UnderBooking_vehicle_reg_number = "KA-50-AC-7502";
 
     public static final String UnderServicing_vehicle_reg_number = "KA-05-AJ-6313";
+    public static int failurecode_unauthorized=401;
     //UnderMaintenance_vehicle_reg_number
 
 

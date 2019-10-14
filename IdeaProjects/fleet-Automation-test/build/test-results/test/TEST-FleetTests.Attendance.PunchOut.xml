@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FleetTests.Attendance.PunchOut" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-09T08:42:34" hostname="Vogos-MacBook-Pro.local" time="1.554">
+  <properties/>
+  <testcase name="verifywrongpunchIn[0]({&quot;latitude&quot;:&quot;12.911965232333293&quot;,&quot;longitude&quot;:&quot;77.65163523430478&quot;})" classname="FleetTests.Attendance.PunchOut" time="1.554"/>
+  <system-out><![CDATA[Control in Wrong PunchOut
+https://stage-fleet-api.vogo.tech/api/v1
+{"detail":"Authentication credentials were not provided."}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

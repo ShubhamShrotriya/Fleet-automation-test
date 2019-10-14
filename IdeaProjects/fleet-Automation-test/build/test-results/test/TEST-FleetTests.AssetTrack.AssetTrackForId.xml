@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FleetTests.AssetTrack.AssetTrackForId" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-09T08:41:32" hostname="Vogos-MacBook-Pro.local" time="1.515">
+  <properties/>
+  <testcase name="ATtrackingidmethod[0]({&quot;latitude&quot;:&quot;12.911965232333293&quot;,&quot;longitude&quot;:&quot;77.65163523430478&quot;,&quot;qr_identifier&quot;:&quot;KA-01-AC-1994&quot;})" classname="FleetTests.AssetTrack.AssetTrackForId" time="1.515"/>
+  <system-out><![CDATA[Control in AssetTrackForId
+https://stage-fleet-api.vogo.tech/api/v1
+200  200
+{"id":968338,"vehicle":{"qr_identifier":"KA-01-AC-1994","registration_number":"TS-01-AC-1994","km_reading":21,"mac_address":null,"vehicle_type":"ic","vehicle_fuel_mappings":["0","1","2","3","4","5","6","7","8"]},"otp":null,"is_prediction_enabled":true,"station":{"id":111,"name":"HSR HQ"}}
+968338
+968338
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

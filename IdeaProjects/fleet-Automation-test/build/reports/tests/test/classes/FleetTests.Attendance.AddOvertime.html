@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class FleetTests.Attendance.AddOvertime</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class FleetTests.Attendance.AddOvertime</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/FleetTests.Attendance.html">FleetTests.Attendance</a> &gt; AddOvertime</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">6</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">10.851s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">ChangeHourApproveOvertimeMethod[0]({&quot;latitude&quot;:&quot;12.911965232333293&quot;,&quot;longitude&quot;:&quot;77.65163523430478&quot;,&quot;overtime_id&quot;:&quot;91&quot;,&quot;overtime_minutes&quot;:&quot;120&quot;,&quot;status&quot;:&quot;approved&quot;})</td>
+<td class="success">2.073s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">RequestAddOvertimeAgain[0]({&quot;latitude&quot;:&quot;12.911965232333293&quot;,&quot;longitude&quot;:&quot;77.65163523430478&quot;,&quot;overtime_minutes&quot;:&quot;60&quot;})</td>
+<td class="success">1.738s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">VerifyApproveOvertime[0]({&quot;latitude&quot;:&quot;12.911965232333293&quot;,&quot;longitude&quot;:&quot;77.65163523430478&quot;,&quot;overtime_id&quot;:&quot;91&quot;,&quot;overtime_minutes&quot;:&quot;60&quot;,&quot;status&quot;:&quot;approved&quot;})</td>
+<td class="success">1.693s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">rejectAddOvertime[0]({&quot;latitude&quot;:&quot;12.911965232333293&quot;,&quot;longitude&quot;:&quot;77.65163523430478&quot;,&quot;overtime_id&quot;:&quot;90&quot;,&quot;overtime_minutes&quot;:&quot;120&quot;,&quot;status&quot;:&quot;rejected&quot;})</td>
+<td class="success">2.138s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">verifyAddOvertime[0]({&quot;latitude&quot;:&quot;12.911965232333293&quot;,&quot;longitude&quot;:&quot;77.65163523430478&quot;,&quot;overtime_minutes&quot;:&quot;60&quot;})</td>
+<td class="success">1.602s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">verifyIncorrectAddOvertime[0]({&quot;latitude&quot;:&quot;12.911965232333293&quot;,&quot;longitude&quot;:&quot;77.65163523430478&quot;,&quot;overtime_minutes&quot;:&quot;60&quot;})</td>
+<td class="success">1.607s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Control in AddOvertime
+https://stage-fleet-api.vogo.tech/api/v1
+HTTP/1.1 200 OK
+Date: Wed, 09 Oct 2019 08:42:45 GMT
+Content-Type: application/json
+Content-Length: 161
+Connection: keep-alive
+Server: gunicorn/19.8.1
+Allow: GET, POST, PUT
+X-Frame-Options: SAMEORIGIN
+
+{
+    &quot;id&quot;: 90,
+    &quot;duration_requested&quot;: 60,
+    &quot;duration_approved&quot;: null,
+    &quot;status&quot;: &quot;requested&quot;,
+    &quot;user_name&quot;: &quot; &quot;,
+    &quot;station_name&quot;: &quot;HSR WRKS&quot;,
+    &quot;created_at&quot;: &quot;2019-10-09T14:12:45+0530&quot;
+}
+{&quot;id&quot;:90,&quot;duration_requested&quot;:60,&quot;duration_approved&quot;:null,&quot;status&quot;:&quot;requested&quot;,&quot;user_name&quot;:&quot; &quot;,&quot;station_name&quot;:&quot;HSR WRKS&quot;,&quot;created_at&quot;:&quot;2019-10-09T14:12:45+0530&quot;}
+90
+ Before setting up the property90
+overtimeId is set
+My Set 90
+ Pre Existing &quot;61&quot;
+Control in add overtime same overtime request again gives 400 2nd 
+https://stage-fleet-api.vogo.tech/api/v1
+Control in reject AddOvertime request 3rd 
+https://stage-fleet-api.vogo.tech/api/v1
+HTTP/1.1 200 OK
+Date: Wed, 09 Oct 2019 08:42:49 GMT
+Content-Type: application/json
+Content-Length: 160
+Connection: keep-alive
+Server: gunicorn/19.8.1
+Allow: GET, POST, PUT
+X-Frame-Options: SAMEORIGIN
+
+{
+    &quot;id&quot;: 90,
+    &quot;duration_requested&quot;: 60,
+    &quot;duration_approved&quot;: null,
+    &quot;status&quot;: &quot;rejected&quot;,
+    &quot;user_name&quot;: &quot; &quot;,
+    &quot;station_name&quot;: &quot;HSR WRKS&quot;,
+    &quot;created_at&quot;: &quot;2019-10-09T14:12:45+0530&quot;
+}
+{&quot;id&quot;:90,&quot;duration_requested&quot;:60,&quot;duration_approved&quot;:null,&quot;status&quot;:&quot;rejected&quot;,&quot;user_name&quot;:&quot; &quot;,&quot;station_name&quot;:&quot;HSR WRKS&quot;,&quot;created_at&quot;:&quot;2019-10-09T14:12:45+0530&quot;}
+Control in AddOvertime again post reject 4rth 
+https://stage-fleet-api.vogo.tech/api/v1
+91
+ New Overtime Id post reject91
+91
+{&quot;id&quot;:91,&quot;duration_requested&quot;:60,&quot;duration_approved&quot;:null,&quot;status&quot;:&quot;requested&quot;,&quot;user_name&quot;:&quot; &quot;,&quot;station_name&quot;:&quot;HSR WRKS&quot;,&quot;created_at&quot;:&quot;2019-10-09T14:12:51+0530&quot;}
+Control in change hour and approve AddOvertime  5th 
+https://stage-fleet-api.vogo.tech/api/v1
+HTTP/1.1 200 OK
+Date: Wed, 09 Oct 2019 08:42:53 GMT
+Content-Type: application/json
+Content-Length: 159
+Connection: keep-alive
+Server: gunicorn/19.8.1
+Allow: GET, POST, PUT
+X-Frame-Options: SAMEORIGIN
+
+{
+    &quot;id&quot;: 91,
+    &quot;duration_requested&quot;: 60,
+    &quot;duration_approved&quot;: 120,
+    &quot;status&quot;: &quot;approved&quot;,
+    &quot;user_name&quot;: &quot; &quot;,
+    &quot;station_name&quot;: &quot;HSR WRKS&quot;,
+    &quot;created_at&quot;: &quot;2019-10-09T14:12:51+0530&quot;
+}
+{&quot;id&quot;:91,&quot;duration_requested&quot;:60,&quot;duration_approved&quot;:120,&quot;status&quot;:&quot;approved&quot;,&quot;user_name&quot;:&quot; &quot;,&quot;station_name&quot;:&quot;HSR WRKS&quot;,&quot;created_at&quot;:&quot;2019-10-09T14:12:51+0530&quot;}
+Control in add overtime simple approve and no hour change gives 400 6th 
+https://stage-fleet-api.vogo.tech/api/v1
+{&quot;detail&quot;:&quot;Unsupported media type \&quot;text/plain; charset=ISO-8859-1\&quot; in request.&quot;}
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 4.10.3</a> at 09-Oct-2019 14:14:15</p>
+</div>
+</div>
+</body>
+</html>

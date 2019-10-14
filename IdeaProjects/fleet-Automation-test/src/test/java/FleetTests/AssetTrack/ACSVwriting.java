@@ -184,4 +184,129 @@ public class ACSVwriting {
             e.printStackTrace();
         }
     }
+
+    public static void AddOvertimeChangeHourApprove(String filePath, String addovertimeid) throws Exception {
+
+        //VehicleRegNumber.GetInventoryAtStation();
+
+        File file = new File(filePath);
+        try {
+            // create FileWriter object with file as parameter
+            FileWriter outputfile = new FileWriter(file);
+
+            // create CSVWriter object filewriter object as parameter
+            CSVWriter writer = new CSVWriter(outputfile);
+
+            // "latitude","longitude","qr_identifier"
+            //"12.911965232333293","77.65163523430478","Z28YRJZ"
+
+            // adding header to csv
+            String[] header = {"latitude","longitude","overtime_id","overtime_minutes","status"};
+            writer.writeNext(header);
+
+            //VehicleRegNumber ab = new VehicleRegNumber();
+
+            // add data to csv
+            String[] data1 = {"12.911965232333293","77.65163523430478", addovertimeid,"120","approved"};
+            writer.writeNext(data1);
+
+            //String[] data2 = {"12.911965232333293", "77.65163523430478", "", "https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/8224ee18-711d-4aab-8bbb-f09b9f104ad7.jpeg", "true", "true", "1", "true", "6", "false"};
+            //writer.writeNext(data2);
+            // String[] data2 = {"12.911965232333293", "77.65163523430478", VehicleRegNumber.km_reading, "https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/8224ee18-711d-4aab-8bbb-f09b9f104ad7.jpeg", "true", "true", "1", "true", "0", "false"};
+            // writer.writeNext(data2);
+
+            // closing writer connection
+            writer.close();
+            System.out.println("file is written you can check");
+        }
+
+        catch(Exception e){
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
+
+    public static void AddOvertimeDataReject(String filePath, String addovertimeid) throws Exception {
+
+        //VehicleRegNumber.GetInventoryAtStation();
+
+        File file = new File(filePath);
+        try {
+            // create FileWriter object with file as parameter
+            FileWriter outputfile = new FileWriter(file);
+
+            // create CSVWriter object filewriter object as parameter
+            CSVWriter writer = new CSVWriter(outputfile);
+
+            // "latitude","longitude","qr_identifier"
+            //"12.911965232333293","77.65163523430478","Z28YRJZ"
+
+            // adding header to csv
+            String[] header = {"latitude","longitude","overtime_id","overtime_minutes","status"};
+            writer.writeNext(header);
+
+            //VehicleRegNumber ab = new VehicleRegNumber();
+
+            // add data to csv
+            String[] data1 = {"12.911965232333293","77.65163523430478",addovertimeid,"120","rejected"};
+            writer.writeNext(data1);
+
+            //String[] data2 = {"12.911965232333293", "77.65163523430478", "", "https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/8224ee18-711d-4aab-8bbb-f09b9f104ad7.jpeg", "true", "true", "1", "true", "6", "false"};
+            //writer.writeNext(data2);
+            // String[] data2 = {"12.911965232333293", "77.65163523430478", VehicleRegNumber.km_reading, "https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/8224ee18-711d-4aab-8bbb-f09b9f104ad7.jpeg", "true", "true", "1", "true", "0", "false"};
+            // writer.writeNext(data2);
+
+            // closing writer connection
+            writer.close();
+            System.out.println("file is written you can check");
+        }
+
+        catch(Exception e){
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+
+    public static void AddOvertimeApprove(String filePath, String addovertimeid) throws Exception {
+
+        //VehicleRegNumber.GetInventoryAtStation();
+
+        File file = new File(filePath);
+        try {
+            // create FileWriter object with file as parameter
+            FileWriter outputfile = new FileWriter(file);
+
+            // create CSVWriter object filewriter object as parameter
+            CSVWriter writer = new CSVWriter(outputfile);
+
+            // "latitude","longitude","qr_identifier"
+            //"12.911965232333293","77.65163523430478","Z28YRJZ"
+
+            // adding header to csv
+            String[] header = {"latitude","longitude","overtime_id","overtime_minutes","status"};
+            writer.writeNext(header);
+
+            //VehicleRegNumber ab = new VehicleRegNumber();
+
+            // add data to csv
+            String[] data1 = {"12.911965232333293","77.65163523430478", addovertimeid,"60","approved"};
+            writer.writeNext(data1);
+
+            //String[] data2 = {"12.911965232333293", "77.65163523430478", "", "https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/8224ee18-711d-4aab-8bbb-f09b9f104ad7.jpeg", "true", "true", "1", "true", "6", "false"};
+            //writer.writeNext(data2);
+            // String[] data2 = {"12.911965232333293", "77.65163523430478", VehicleRegNumber.km_reading, "https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/8224ee18-711d-4aab-8bbb-f09b9f104ad7.jpeg", "true", "true", "1", "true", "0", "false"};
+            // writer.writeNext(data2);
+
+            // closing writer connection
+            writer.close();
+            System.out.println("file is written you can check");
+        }
+
+        catch(Exception e){
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FleetTests.Attendance.Penality" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-10-09T08:42:28" hostname="Vogos-MacBook-Pro.local" time="3.25">
+  <properties/>
+  <testcase name="PenalityDetails" classname="FleetTests.Attendance.Penality" time="1.618"/>
+  <testcase name="PenalityDetails_IncorrectToken" classname="FleetTests.Attendance.Penality" time="1.631"/>
+  <system-out><![CDATA[40516d19401336f8efd574405fe8953629d6f3fd
+Control in Penality Details 
+https://stage-fleet-api.vogo.tech/api/v1
+io.restassured.internal.RestAssuredResponseImpl@32c09903
+40516d19401336f8efd574405fe8953629d6f3fd
+Control in Penality Details 
+https://stage-fleet-api.vogo.tech/api/v1
+io.restassured.internal.RestAssuredResponseImpl@5ef8453e
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

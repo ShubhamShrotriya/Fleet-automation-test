@@ -3,20 +3,14 @@
 <suite verbose="0" name="Failed suite [Gradle suite]">
   <test name="Gradle test(failed)" preserve-order="false">
     <classes>
-      <class name="FleetTests.AssetTrack.ZCompleteAssetTrack">
+      <class name="FleetTests.Attendance.Penality">
         <methods>
-          <include name="CompleteAssetTracknormal" invocation-numbers="0"/>
-          <include name="InCompleteAssetTrackWrongKMreading" invocation-numbers="0 1"/>
+          <include name="PenalityDetails_IncorrectToken"/>
         </methods>
       </class>
-      <class name="FleetTests.AssetTrack.StartAssetTracking">
+      <class name="FleetTests.Attendance.Summary">
         <methods>
-          <include name="StartAssetTrack" invocation-numbers="0"/>
-        </methods>
-      </class>
-      <class name="FleetTests.AssetTrack.AssetTrackForId">
-        <methods>
-          <include name="ATtrackingidmethod" invocation-numbers="0"/>
+          <include name="AttendanceSummary_IncorrectToken"/>
         </methods>
       </class>
     </classes>

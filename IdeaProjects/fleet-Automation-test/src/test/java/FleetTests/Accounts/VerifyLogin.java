@@ -37,7 +37,6 @@ public class VerifyLogin {
         response.then();
         int actual_status_code=response.getStatusCode();
         Assert.assertEquals(actual_status_code, Constants.successcode);
-       // Assert.assertEquals(response.toString(), "OTP sent");
 
 
 

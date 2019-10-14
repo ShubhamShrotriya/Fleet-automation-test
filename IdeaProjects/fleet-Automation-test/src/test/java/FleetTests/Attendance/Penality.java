@@ -23,20 +23,14 @@ public class Penality
         System.out.println(VerifyOTP.AccessToken);
 
         System.out.println("Control in Penality Details ");
-        //GetProfile GP = new GetProfile();
-        // GP.setAccesstoken("6361859543");
+
         RestAssured.baseURI = Constants.stageFleetBaseURL;
         System.out.println(RestAssured.baseURI);
-
-
-        //       PropertiesFile prop = new PropertiesFile();
-//        String access_token = prop.accesstoken;
-        // System.out.println("Token 40516d19401336f8efd574405fe8953629d6f3fd");
 
         HttpsUtils HU = new HttpsUtils();
         Response response = given().headers(HU.constantHeaders()).
                 headers(HU.updateHeaders("Authorization", "Token "+ VerifyOTP.AccessToken)).
-                // headers(HU.updateHeaders("Authorization", "Token "+ access_token))
+
                         contentType(ContentType.JSON)
 
                 .when().get("attendance/penalty/");
@@ -48,5 +42,32 @@ public class Penality
 
 //
         Assert.assertEquals(response.getStatusCode(), Constants.successcode);
+    }
+
+    @Test
+    public static void PenalityDetails_IncorrectToken() {
+
+        System.out.println(VerifyOTP.AccessToken);
+
+        System.out.println("Control in Penality Details ");
+
+        RestAssured.baseURI = Constants.stageFleetBaseURL;
+        System.out.println(RestAssured.baseURI);
+
+        HttpsUtils HU = new HttpsUtils();
+        Response response = given().headers(HU.constantHeaders()).
+                headers(HU.updateHeaders("Authorization", "Token 3231331"+ VerifyOTP.AccessToken)).
+
+                contentType(ContentType.JSON)
+
+                .when().get("attendance/penalty/");
+
+        response.then();
+
+        String responsebody=response.toString();
+        System.out.println(responsebody);
+
+//
+        Assert.assertEquals(response.getStatusCode(), Constants.Failure_unauthorizedUser);
     }
 }

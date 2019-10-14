@@ -258,6 +258,7 @@ public class VehicleRegNumber {
 
 
     public static String getvehiclekm(String vehicle_reg_number) throws Exception {
+        System.out.println("Control in getvehiclekm");
         //"/accounts/login/"
 
         //String Vehicletogetdetailsfor = getvehiclebasedonstatus.GetVehiclesBasedOnStatus();
@@ -275,14 +276,23 @@ public class VehicleRegNumber {
 
                 when().get("/vehicles/current-status/?registration_number=" + vehicle_reg_number);
         ;
-        response.then();
+        response.then().log().all();
 
         JSONParser parser = new JSONParser();
         JSONObject VehicleDetails = (JSONObject) parser.parse(response.getBody().asString());
 
         boolean IOTstatus = (boolean) VehicleDetails.get("is_iot_enabled");
         String qr_identifier = (String) VehicleDetails.get("qr_identifier");
-        km_reading = String.valueOf(VehicleDetails.get("km_reading"));
+        //int Enterkm_reading = Integer.parseInt((String) VehicleDetails.get("km_reading"));
+
+        double km_reading1 = (double)VehicleDetails.get("km_reading");
+
+        System.out.println("this is the actual km from backend " + " " + km_reading1 );
+        //Enterkm_reading=Enterkm_reading+1;
+        int fe_km_reading = ((int)km_reading1)+1;
+        System.out.println("this is the km value I am getting from the backend " + " " + fe_km_reading );
+        //km_reading = String.valueOf(Enterkm_reading);
+       km_reading = String.valueOf(fe_km_reading);
         helmet_count = Constants.helmet_count;
         Vehicles_status = (String) VehicleDetails.get("status");
         registration_number = (String) VehicleDetails.get("registration_number");

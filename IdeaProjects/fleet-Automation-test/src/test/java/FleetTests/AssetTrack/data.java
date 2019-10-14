@@ -23,11 +23,9 @@ public class data {
         System.out.println("Control in GetvehicleStatus");
         RestAssured.baseURI = Constants.stageFleetBaseURL;
         System.out.println(RestAssured.baseURI);
-        // System.out.println("AssetTrackBody" + AssetTrackBody);
         HttpsUtils HU = new HttpsUtils();
 
         Response response = given().
-                // headers(new HttpsUtils().constantHeaders()).body(AssetTrackBody).
                         headers(HU.constantHeaders()).headers(HU.updateHeaders("Authorization", "Token " + VerifyOTP.AccessToken)).
                         contentType(ContentType.JSON).
 

@@ -32,10 +32,8 @@ public class ZCompleteAssetTrack {
             String Vehiclekmreading=VehicleRegNumber.getkmreading();
                  System.out.println("Km reading="+Vehiclekmreading);
             System.out.println("start writing in complete CSV)");
-             //ACSVwriting.writeDataLineByLineForStartingAT("/Users/vogo/IdeaProjects/fleet-Automation-test/src/main/resources/TestData/AssetTrackId.csv",qr_identifier);
             ACSVwriting.writeDataLineByLineForCompletingAT("/Users/vogo/IdeaProjects/fleet-Automation-test/src/main/resources/TestData/CompleteAssetTrackId.csv",Vehiclekmreading);
             System.out.println("End writing in complete CSV)");
-            // return TestHelper.getDataForDataProvider("/Users/vogo/IdeaProjects/fleet-Automation-test/src/main/resources/TestData/CompleteAssetTrackBody.csv", CompleteAssetTrackPojo.class);
             return TestHelper.getDataForDataProvider("/Users/vogo/IdeaProjects/fleet-Automation-test/src/main/resources/TestData/CompleteAssetTrackId.csv", CompleteAssetTrackPojo.class);
 
 
@@ -52,7 +50,6 @@ public class ZCompleteAssetTrack {
 
     @Test(dataProvider = "CompleteAssetTrack")
     public static void CompleteAssetTracknormal(String CompleteAssetTrackBody) throws Exception {
-        //"/accounts/login/"
 
         System.out.println("Control in Complete  Asset Track normal one");
         RestAssured.baseURI= Constants.stageFleetBaseURL;
@@ -60,24 +57,19 @@ public class ZCompleteAssetTrack {
         System.out.println(CompleteAssetTrackBody);
         HttpsUtils HU = new HttpsUtils();
 
-        ////just commenedted this below
-        //String AssetTrackId=System.getProperty("AssetTrackId");
 
         Response response = given().
-                // headers(new HttpsUtils().constantHeaders()).body(AssetTrackBody).
                         headers(HU.constantHeaders()).headers(HU.updateHeaders("Authorization","Token "+ VerifyOTP.AccessToken)).
                         body(CompleteAssetTrackBody ).contentType(ContentType.JSON).
 
                         when().post("/asset/" + AssetTrackForId.AssetTrackId  + "/complete/");
-        response.then();
+        response.then().log().all();
         int actual_status_code=response.getStatusCode();
         System.out.println(actual_status_code +" " + " " +  Constants.successcode);
         System.out.println(" this is the line in normal asset track please check");
-        VehicleRegNumber.GetInventoryAtStation();
 
         Assert.assertEquals(actual_status_code, Constants.successcode);
-        // Assert.assertEquals(response.toString(), "OTP sent");
-    }
+        }
 
 
 
@@ -97,10 +89,8 @@ public class ZCompleteAssetTrack {
             String Vehiclekmreading=VehicleRegNumber.getkmreading();
             System.out.println("Km reading="+Vehiclekmreading);
             System.out.println("start writing in complete CSV for Incorrect AT)");
-            //ACSVwriting.writeDataLineByLineForStartingAT("/Users/vogo/IdeaProjects/fleet-Automation-test/src/main/resources/TestData/AssetTrackId.csv",qr_identifier);
-            ACSVwriting.writeDataLineByLineForInCompletingAT("/Users/vogo/IdeaProjects/fleet-Automation-test/src/main/resources/TestData/InCompleteAssetTrackId.csv",Vehiclekmreading);
+             ACSVwriting.writeDataLineByLineForInCompletingAT("/Users/vogo/IdeaProjects/fleet-Automation-test/src/main/resources/TestData/InCompleteAssetTrackId.csv",Vehiclekmreading);
             System.out.println("End writing in complete CSV for incorrect AT )");
-            // return TestHelper.getDataForDataProvider("/Users/vogo/IdeaProjects/fleet-Automation-test/src/main/resources/TestData/CompleteAssetTrackBody.csv", CompleteAssetTrackPojo.class);
             return TestHelper.getDataForDataProvider("/Users/vogo/IdeaProjects/fleet-Automation-test/src/main/resources/TestData/InCompleteAssetTrackId.csv", CompleteAssetTrackPojo.class);
 
 
@@ -128,7 +118,6 @@ public class ZCompleteAssetTrack {
         String AssetTrackId=System.getProperty("AssetTrackId");
 
         Response response = given().
-                // headers(new HttpsUtils().constantHeaders()).body(AssetTrackBody).
                         headers(HU.constantHeaders()).headers(HU.updateHeaders("Authorization","Token "+ VerifyOTP.AccessToken)).
                         body(CompleteAssetTrackBody ).contentType(ContentType.JSON).
 
@@ -139,11 +128,10 @@ public class ZCompleteAssetTrack {
         VehicleRegNumber.GetInventoryAtStation();
 
         Assert.assertEquals(actual_status_code, Constants.failurecode);
-        // Assert.assertEquals(response.toString(), "OTP sent");
-    }
+         }
 
 
-    @Test//(dataProvider = "CompleteAssetTrack")
+  //  @Test//(dataProvider = "CompleteAssetTrack")
     public static void CompleteAssetTrackUM() throws IOException, ParseException {
 
         JSONParser jsonParser = new JSONParser();
@@ -153,17 +141,14 @@ public class ZCompleteAssetTrack {
             //Read JSON file
           JSONObject obj = (JSONObject)jsonParser.parse(reader);
 
-            //JSONArray vehicleUM = (JSONArray) obj;
             System.out.println(obj.toString());
 
 
         System.out.println("Control in complete Asset Track Under Maintenance");
         RestAssured.baseURI= Constants.stageFleetBaseURL;
         System.out.println(RestAssured.baseURI);
-       // System.out.println(CompleteAssetTrackBody);
         HttpsUtils HU = new HttpsUtils();
 
-        //String AssetTrackId=System.getProperty("AssetTrackId");
 
         Response response = given().
 

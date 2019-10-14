@@ -46,16 +46,6 @@ public class PunchIn {
         String responseBody = response.asString();
         System.out.println(responseBody);
 
-//       String responseBody = null;
-        //Access_token= HttpsUtils.ParseJSON(responseBody,"access_token");
-        // System.setProperty("Token",Access_token);
-        // System.out.println(Access_token);
-//        String responseBody = response.asString();
-//        System.out.println(responseBody);
-
-       // AccessToken = HttpsUtils.ParseJSON(responseBody, "access_token");
-        //System.setProperty("StartAssetTrackId",AssetTrackId);
-       // System.out.println(AccessToken);
         Assert.assertEquals(response.getStatusCode(), Constants.successcode);
 
     }
@@ -73,7 +63,7 @@ public class PunchIn {
         System.out.println("Control in Wrong PunchIn");
         RestAssured.baseURI = Constants.stageFleetBaseURL;
         System.out.println(RestAssured.baseURI);
-        // System.out.println(VerifyOTPRequestBody);
+
 
 
         Response response = given().
@@ -87,16 +77,6 @@ public class PunchIn {
         String responseBody = response.asString();
         System.out.println(responseBody);
 
-//       String responseBody = null;
-        //Access_token= HttpsUtils.ParseJSON(responseBody,"access_token");
-        // System.setProperty("Token",Access_token);
-        // System.out.println(Access_token);
-//        String responseBody = response.asString();
-//        System.out.println(responseBody);
-
-       // AccessToken = HttpsUtils.ParseJSON(responseBody, "access_token");
-        //System.setProperty("StartAssetTrackId",AssetTrackId);
-        //System.out.println(AccessToken);
         Assert.assertEquals(response.getStatusCode(), Constants.Failure_unauthorizedUser);
 
     }

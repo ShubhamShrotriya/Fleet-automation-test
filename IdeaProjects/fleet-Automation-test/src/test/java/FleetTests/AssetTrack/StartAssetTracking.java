@@ -24,11 +24,9 @@ public class StartAssetTracking {
 
 
             String qr_identifier=VehicleRegNumber.GetInventoryAtStation();
-            //VehicleRegNumber.GetInventoryAtStation();
-            System.out.println("qr_identifier="+qr_identifier);
+             System.out.println("qr_identifier="+qr_identifier);
             System.out.println("start writing in CSV)");
-            // ACSVwriting.writeDataLineByLineForStartingAT("/Users/vogo/IdeaProjects/fleet-Automation-test/src/main/resources/TestData/AssetTrackId.csv", VehicleRegNumber.qr_identifier);
-            ACSVwriting.writeDataLineByLineForStartingAT("/Users/vogo/IdeaProjects/fleet-Automation-test/src/main/resources/TestData/AssetTrackId.csv",qr_identifier);
+             ACSVwriting.writeDataLineByLineForStartingAT("/Users/vogo/IdeaProjects/fleet-Automation-test/src/main/resources/TestData/AssetTrackId.csv",qr_identifier);
             System.out.println("End writing in CSV)");
             return TestHelper.getDataForDataProvider("/Users/vogo/IdeaProjects/fleet-Automation-test/src/main/resources/TestData/AssetTrackBody.csv", AssetTrackForIdPojo.class);
 

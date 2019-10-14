@@ -1,148 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite hostname="Vogos-MacBook-Pro.local" name="FleetTests.Accounts.VerifyLogin" tests="15" failures="5" timestamp="30 Sep 2019 07:59:33 GMT" time="105.158" errors="0">
-  <testcase name="verify_login" time="6.072" classname="FleetTests.Accounts.VerifyLogin"/>
-  <testcase name="verify_otp_fail" time="2.378" classname="FleetTests.Accounts.VerifyOTP"/>
-  <testcase name="verify_otp_pass" time="1.965" classname="FleetTests.Accounts.VerifyOTP"/>
-  <testcase name="verifyProfile" time="2.628" classname="FleetTests.Accounts.verifyProfile"/>
-  <testcase name="ATtrackingidmethod" time="1.711" classname="FleetTests.AssetTrack.AssetTrackForId">
-    <failure type="java.lang.AssertionError" message="expected:&amp;lt;200&amp;gt; but was:&amp;lt;400&amp;gt;">
-      <![CDATA[java.lang.AssertionError: expected:<200> but was:<400>
-	at FleetTests.AssetTrack.AssetTrackForId.ATtrackingidmethod(AssetTrackForId.java:75)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:139)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:89)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
-	at com.sun.proxy.$Proxy2.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:131)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:155)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:137)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 35 stack frames]]>
-    </failure>
-  </testcase>
-  <testcase name="ATtrackingidmethod" time="1.624" classname="FleetTests.AssetTrack.AssetTrackForUnderBooking"/>
-  <testcase name="ATtrackingidmethod" time="1.616" classname="FleetTests.AssetTrack.AssetTrackForUnderServicing"/>
-  <testcase name="StartAssetTrack" time="2.351" classname="FleetTests.AssetTrack.StartAssetTracking">
-    <failure type="java.lang.AssertionError" message="expected:&amp;lt;200&amp;gt; but was:&amp;lt;500&amp;gt;">
-      <![CDATA[java.lang.AssertionError: expected:<200> but was:<500>
-	at FleetTests.AssetTrack.StartAssetTracking.StartAssetTrack(StartAssetTracking.java:66)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:139)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:89)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
-	at com.sun.proxy.$Proxy2.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:131)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:155)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:137)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 35 stack frames]]>
-    </failure>
-  </testcase>
-  <testcase name="CompleteAssetTracknormal" time="7.199" classname="FleetTests.AssetTrack.ZCompleteAssetTrack">
-    <failure type="java.lang.AssertionError" message="expected:&amp;lt;200&amp;gt; but was:&amp;lt;500&amp;gt;">
-      <![CDATA[java.lang.AssertionError: expected:<200> but was:<500>
-	at FleetTests.AssetTrack.ZCompleteAssetTrack.CompleteAssetTracknormal(ZCompleteAssetTrack.java:78)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:139)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:89)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
-	at com.sun.proxy.$Proxy2.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:131)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:155)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:137)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 35 stack frames]]>
-    </failure>
-  </testcase>
-  <testcase name="InCompleteAssetTrackWrongKMreading" time="7.15" classname="FleetTests.AssetTrack.ZCompleteAssetTrack">
-    <failure type="java.lang.AssertionError" message="expected:&amp;lt;400&amp;gt; but was:&amp;lt;500&amp;gt;">
-      <![CDATA[java.lang.AssertionError: expected:<400> but was:<500>
-	at FleetTests.AssetTrack.ZCompleteAssetTrack.InCompleteAssetTrackWrongKMreading(ZCompleteAssetTrack.java:141)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:139)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:89)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
-	at com.sun.proxy.$Proxy2.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:131)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:155)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:137)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 35 stack frames]]>
-    </failure>
-  </testcase>
-  <testcase name="InCompleteAssetTrackWrongKMreading" time="6.73" classname="FleetTests.AssetTrack.ZCompleteAssetTrack">
-    <failure type="java.lang.AssertionError" message="expected:&amp;lt;400&amp;gt; but was:&amp;lt;500&amp;gt;">
-      <![CDATA[java.lang.AssertionError: expected:<400> but was:<500>
-	at FleetTests.AssetTrack.ZCompleteAssetTrack.InCompleteAssetTrackWrongKMreading(ZCompleteAssetTrack.java:141)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:139)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:89)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
-	at com.sun.proxy.$Proxy2.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:131)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:155)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:137)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 35 stack frames]]>
-    </failure>
-  </testcase>
-  <testcase name="verifAddOvertime" time="1.513" classname="FleetTests.Attendance.AddOvertime"/>
-  <testcase name="verifypunchIn" time="1.585" classname="FleetTests.Attendance.PunchIn"/>
-  <testcase name="verifywrongpunchIn" time="1.567" classname="FleetTests.Attendance.PunchIn"/>
-  <testcase name="AttendanceSummary" time="1.532" classname="FleetTests.Attendance.Summary"/>
+<testsuite hostname="Vogos-MacBook-Pro.local" name="FleetTests.Accounts.VerifyLogin" tests="30" failures="0" timestamp="9 Oct 2019 08:43:00 GMT" time="104.242" errors="0">
+  <testcase name="verify_login" time="4.178" classname="FleetTests.Accounts.VerifyLogin"/>
+  <testcase name="verify_otp_fail" time="1.58" classname="FleetTests.Accounts.VerifyOTP"/>
+  <testcase name="verify_otp_pass" time="1.59" classname="FleetTests.Accounts.VerifyOTP"/>
+  <testcase name="verifyProfile" time="2.269" classname="FleetTests.Accounts.verifyProfile"/>
+  <testcase name="verifyProfile_IncorrectToken" time="1.545" classname="FleetTests.Accounts.verifyProfile"/>
+  <testcase name="ATtrackingidmethod" time="1.515" classname="FleetTests.AssetTrack.AssetTrackForId"/>
+  <testcase name="ATtrackingidmethod" time="1.609" classname="FleetTests.AssetTrack.AssetTrackForUnderBooking"/>
+  <testcase name="ATtrackingidmethod" time="1.826" classname="FleetTests.AssetTrack.AssetTrackForUnderServicing"/>
+  <testcase name="StartAssetTrack" time="1.581" classname="FleetTests.AssetTrack.StartAssetTracking"/>
+  <testcase name="CompleteAssetTracknormal" time="2.429" classname="FleetTests.AssetTrack.ZCompleteAssetTrack"/>
+  <testcase name="CompleteAssetTracknormal" time="2.04" classname="FleetTests.AssetTrack.ZCompleteAssetTrack"/>
+  <testcase name="CompleteAssetTracknormal" time="1.769" classname="FleetTests.AssetTrack.ZCompleteAssetTrack"/>
+  <testcase name="InCompleteAssetTrackWrongKMreading" time="3.35" classname="FleetTests.AssetTrack.ZCompleteAssetTrack"/>
+  <testcase name="InCompleteAssetTrackWrongKMreading" time="3.302" classname="FleetTests.AssetTrack.ZCompleteAssetTrack"/>
+  <testcase name="PenalityDetails" time="1.618" classname="FleetTests.Attendance.Penality"/>
+  <testcase name="PenalityDetails_IncorrectToken" time="1.631" classname="FleetTests.Attendance.Penality"/>
+  <testcase name="verifypunchIn" time="1.635" classname="FleetTests.Attendance.PunchIn"/>
+  <testcase name="verifywrongpunchIn" time="1.509" classname="FleetTests.Attendance.PunchIn"/>
+  <testcase name="verifywrongpunchIn" time="1.554" classname="FleetTests.Attendance.PunchOut"/>
+  <testcase name="RoasterDetails" time="1.847" classname="FleetTests.Attendance.Roaster"/>
+  <testcase name="AttendanceSummary" time="1.635" classname="FleetTests.Attendance.Summary"/>
+  <testcase name="AttendanceSummary_IncorrectToken" time="1.523" classname="FleetTests.Attendance.Summary"/>
+  <testcase name="StationsDetails" time="1.546" classname="FleetTests.Stations.Stations"/>
+  <testcase name="StationsDetails_IncorrectId" time="1.488" classname="FleetTests.Stations.Stations"/>
+  <testcase name="verifyAddOvertime" time="1.602" classname="FleetTests.Attendance.AddOvertime"/>
+  <testcase name="verifyIncorrectAddOvertime" time="1.607" classname="FleetTests.Attendance.AddOvertime"/>
+  <testcase name="rejectAddOvertime" time="2.138" classname="FleetTests.Attendance.AddOvertime"/>
+  <testcase name="RequestAddOvertimeAgain" time="1.738" classname="FleetTests.Attendance.AddOvertime"/>
+  <testcase name="ChangeHourApproveOvertimeMethod" time="2.073" classname="FleetTests.Attendance.AddOvertime"/>
+  <testcase name="VerifyApproveOvertime" time="1.693" classname="FleetTests.Attendance.AddOvertime"/>
 </testsuite>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FleetTests.AssetTrack.ZCompleteAssetTrack" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-10-09T08:42:12" hostname="Vogos-MacBook-Pro.local" time="16.067">
+  <properties/>
+  <testcase name="CompleteAssetTracknormal[0]({&quot;latitude&quot;:&quot;12.911965232333293&quot;,&quot;longitude&quot;:&quot;77.65163523430478&quot;,&quot;current_km_reading&quot;:&quot;22&quot;,&quot;image_url&quot;:&quot;https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/8224ee18-711d-4aab-8bbb-f09b9f104ad7.jpeg&quot;,&quot;is_iot_box_working&quot;:&quot;true&quot;,&quot;is_otp_working&quot;:&quot;true&quot;,&quot;helmet_count&quot;:&quot;1&quot;,&quot;is_document_available&quot;:&quot;true&quot;,&quot;fuel_level&quot;:&quot;6&quot;,&quot;is_vehicle_damaged&quot;:&quot;false&quot;})" classname="FleetTests.AssetTrack.ZCompleteAssetTrack" time="2.429"/>
+  <testcase name="CompleteAssetTracknormal[1]({&quot;latitude&quot;:&quot;12.911965232333293&quot;,&quot;longitude&quot;:&quot;77.65163523430478&quot;,&quot;current_km_reading&quot;:&quot;22&quot;,&quot;image_url&quot;:&quot;https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/8224ee18-711d-4aab-8bbb-f09b9f104ad7.jpeg&quot;,&quot;is_iot_box_working&quot;:&quot;true&quot;,&quot;is_otp_working&quot;:&quot;true&quot;,&quot;helmet_count&quot;:&quot;1&quot;,&quot;is_document_available&quot;:&quot;true&quot;,&quot;fuel_level&quot;:&quot;0&quot;,&quot;is_vehicle_damaged&quot;:&quot;false&quot;})" classname="FleetTests.AssetTrack.ZCompleteAssetTrack" time="2.04"/>
+  <testcase name="CompleteAssetTracknormal[2]({&quot;latitude&quot;:&quot;12.911965232333293&quot;,&quot;longitude&quot;:&quot;77.65163523430478&quot;,&quot;current_km_reading&quot;:&quot;22&quot;,&quot;image_url&quot;:&quot;https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/8224ee18-711d-4aab-8bbb-f09b9f104ad7.jpeg&quot;,&quot;is_iot_box_working&quot;:&quot;true&quot;,&quot;is_otp_working&quot;:&quot;true&quot;,&quot;helmet_count&quot;:&quot;1&quot;,&quot;is_document_available&quot;:&quot;true&quot;,&quot;fuel_level&quot;:&quot;0&quot;,&quot;is_vehicle_damaged&quot;:&quot;false&quot;})" classname="FleetTests.AssetTrack.ZCompleteAssetTrack" time="1.769"/>
+  <testcase name="InCompleteAssetTrackWrongKMreading[0]({&quot;latitude&quot;:&quot;12.911965232333293&quot;,&quot;longitude&quot;:&quot;77.65163523430478&quot;,&quot;current_km_reading&quot;:&quot;47832434234&quot;,&quot;image_url&quot;:&quot;https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/8224ee18-711d-4aab-8bbb-f09b9f104ad7.jpeg&quot;,&quot;is_iot_box_working&quot;:&quot;true&quot;,&quot;is_otp_working&quot;:&quot;true&quot;,&quot;helmet_count&quot;:&quot;1&quot;,&quot;is_document_available&quot;:&quot;true&quot;,&quot;fuel_level&quot;:&quot;6&quot;,&quot;is_vehicle_damaged&quot;:&quot;false&quot;})" classname="FleetTests.AssetTrack.ZCompleteAssetTrack" time="3.35"/>
+  <testcase name="InCompleteAssetTrackWrongKMreading[1]({&quot;latitude&quot;:&quot;12.911965232333293&quot;,&quot;longitude&quot;:&quot;77.65163523430478&quot;,&quot;current_km_reading&quot;:&quot;&quot;,&quot;image_url&quot;:&quot;https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/8224ee18-711d-4aab-8bbb-f09b9f104ad7.jpeg&quot;,&quot;is_iot_box_working&quot;:&quot;true&quot;,&quot;is_otp_working&quot;:&quot;true&quot;,&quot;helmet_count&quot;:&quot;1&quot;,&quot;is_document_available&quot;:&quot;true&quot;,&quot;fuel_level&quot;:&quot;6&quot;,&quot;is_vehicle_damaged&quot;:&quot;false&quot;})" classname="FleetTests.AssetTrack.ZCompleteAssetTrack" time="3.302"/>
+  <system-out><![CDATA[Control in Complete  Asset Track normal one
+https://stage-fleet-api.vogo.tech/api/v1
+{"latitude":"12.911965232333293","longitude":"77.65163523430478","current_km_reading":"22","image_url":"https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/8224ee18-711d-4aab-8bbb-f09b9f104ad7.jpeg","is_iot_box_working":"true","is_otp_working":"true","helmet_count":"1","is_document_available":"true","fuel_level":"6","is_vehicle_damaged":"false"}
+HTTP/1.1 200 OK
+Date: Wed, 09 Oct 2019 08:42:14 GMT
+Content-Type: application/json
+Content-Length: 2
+Connection: keep-alive
+Server: gunicorn/19.8.1
+Allow: POST
+X-Frame-Options: SAMEORIGIN
+
+{
+    
+}
+200  200
+ this is the line in normal asset track please check
+Control in Complete  Asset Track normal one
+https://stage-fleet-api.vogo.tech/api/v1
+{"latitude":"12.911965232333293","longitude":"77.65163523430478","current_km_reading":"22","image_url":"https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/8224ee18-711d-4aab-8bbb-f09b9f104ad7.jpeg","is_iot_box_working":"true","is_otp_working":"true","helmet_count":"1","is_document_available":"true","fuel_level":"0","is_vehicle_damaged":"false"}
+HTTP/1.1 200 OK
+Date: Wed, 09 Oct 2019 08:42:16 GMT
+Content-Type: application/json
+Content-Length: 2
+Connection: keep-alive
+Server: gunicorn/19.8.1
+Allow: POST
+X-Frame-Options: SAMEORIGIN
+
+{
+    
+}
+200  200
+ this is the line in normal asset track please check
+Control in Complete  Asset Track normal one
+https://stage-fleet-api.vogo.tech/api/v1
+{"latitude":"12.911965232333293","longitude":"77.65163523430478","current_km_reading":"22","image_url":"https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/8224ee18-711d-4aab-8bbb-f09b9f104ad7.jpeg","is_iot_box_working":"true","is_otp_working":"true","helmet_count":"1","is_document_available":"true","fuel_level":"0","is_vehicle_damaged":"false"}
+HTTP/1.1 200 OK
+Date: Wed, 09 Oct 2019 08:42:18 GMT
+Content-Type: application/json
+Content-Length: 2
+Connection: keep-alive
+Server: gunicorn/19.8.1
+Allow: POST
+X-Frame-Options: SAMEORIGIN
+
+{
+    
+}
+200  200
+ this is the line in normal asset track please check
+Control in InComplete  Asset Track 400 bad data
+https://stage-fleet-api.vogo.tech/api/v1
+{"latitude":"12.911965232333293","longitude":"77.65163523430478","current_km_reading":"47832434234","image_url":"https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/8224ee18-711d-4aab-8bbb-f09b9f104ad7.jpeg","is_iot_box_working":"true","is_otp_working":"true","helmet_count":"1","is_document_available":"true","fuel_level":"6","is_vehicle_damaged":"false"}
+400  400
+Control in AvailableIventoryAtStation
+https://stage-fleet-api.vogo.tech/api/v1
+Control in InComplete  Asset Track 400 bad data
+https://stage-fleet-api.vogo.tech/api/v1
+{"latitude":"12.911965232333293","longitude":"77.65163523430478","current_km_reading":"","image_url":"https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/8224ee18-711d-4aab-8bbb-f09b9f104ad7.jpeg","is_iot_box_working":"true","is_otp_working":"true","helmet_count":"1","is_document_available":"true","fuel_level":"6","is_vehicle_damaged":"false"}
+400  400
+Control in AvailableIventoryAtStation
+https://stage-fleet-api.vogo.tech/api/v1
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

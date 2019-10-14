@@ -52,14 +52,13 @@ public class AssetTrackForUnderBooking {
 
     @Test(dataProvider = "trackingidunderbooking")
     public static void ATtrackingidmethod(String AssetTrackBodyUnderBooking) throws Exception {
-        //"/accounts/login/"
-        //System.out.println(AssetTrackForId.trackingid());
+
 
 
         System.out.println("Control in AssetTrack For UnderBooking");
         RestAssured.baseURI= Constants.stageFleetBaseURL;
         System.out.println(RestAssured.baseURI);
-        //System.out.println("AssetTrackBody"+AssetTrackBody);
+
         HttpsUtils HU = new HttpsUtils();
 
         Response response = given().
@@ -68,19 +67,14 @@ public class AssetTrackForUnderBooking {
 
         when().post("asset/");
         response.then();
-
-        //System.out.println("Headers is "+HU.headers);
         int actual_status_code=response.getStatusCode();
         System.out.println(actual_status_code +" " + " " +  Constants.failurecode);
-        //Assert.assertEquals(actual_status_code, Constants.successcode);
+
 
         String responseBody = response.asString();
         System.out.println(responseBody);
         Assert.assertEquals(actual_status_code, Constants.failurecode);
-        //AssetTrackId= HttpsUtils.ParseJSON(responseBody,"id");
-        //System.setProperty("StartAssetTrackId",AssetTrackId);
-        //System.out.println(AssetTrackId);
-        //System.getProperty(AssetTrStartAssetTrackId);
+
 
 
 
