@@ -18,7 +18,9 @@ public class VerifyLogin {
     @DataProvider(name = "dataForLogin")
     public Object[][] dataForLoginmethod()
     {
-        return TestHelper.getDataForDataProvider("/Users/vogo/IdeaProjects/fleet-Automation-test/src/main/resources/TestData/verfiycopy.csv",CreateLogin.class);
+        return TestHelper.getDataForDataProvider("/Users/vogo/IdeaProjects/fleet-Automation-test/src/main/resources/TestData/verfiyLogin.csv",CreateLogin.class);
+
+        //return CreateLogin.setmobile();
     }
 
     @Test(dataProvider = "dataForLogin")

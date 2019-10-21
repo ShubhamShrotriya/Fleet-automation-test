@@ -1,234 +1,0 @@
-Control in Login
-)https://stage-fleet-api.vogo.tech/api/v1
-{"mobile":"6361859543"}
-Control in VerifyOtp
-)https://stage-fleet-api.vogo.tech/api/v1
-Control in VerifyOtp
-)https://stage-fleet-api.vogo.tech/api/v1
-)40516d19401336f8efd574405fe8953629d6f3fd
-)40516d19401336f8efd574405fe8953629d6f3fd
-)40516d19401336f8efd574405fe8953629d6f3fd
-Control in Verify Profile
-)https://stage-fleet-api.vogo.tech/api/v1
-)40516d19401336f8efd574405fe8953629d6f3fd
-Control in Verify Profile
-)https://stage-fleet-api.vogo.tech/api/v1
-
-	Control in AssetTrackForId
-
-	)https://stage-fleet-api.vogo.tech/api/v1
-
-		200  200
-
-	¢{"id":968338,"vehicle":{"qr_identifier":"KA-01-AC-1994","registration_number":"TS-01-AC-1994","km_reading":21,"mac_address":null,"vehicle_type":"ic","vehicle_fuel_mappings":["0","1","2","3","4","5","6","7","8"]},"otp":null,"is_prediction_enabled":true,"station":{"id":111,"name":"HSR HQ"}}
-
-	968338
-
-	968338
-'Control in AssetTrack For UnderBooking
-)https://stage-fleet-api.vogo.tech/api/v1
-	400  400
-›{"error_code":"FLT_AT_4003","detail":"Vehicle Under Booking does not allow Asset Tracking. Vehicle is in Under Booking status since 105days 23hrs 1mins."}
-+Control in Asset Track For Under Servicing
-)https://stage-fleet-api.vogo.tech/api/v1
-	400  400
-›{"error_code":"FLT_AT_4003","detail":"Vehicle Under Booking does not allow Asset Tracking. Vehicle is in Under Booking status since 105days 23hrs 1mins."}
-Control in Start Asset Track
-968338
-)https://stage-fleet-api.vogo.tech/api/v1
-\{"latitude":"12.911965232333293","longitude":"77.65163523430478","qr_identifier":"Z33JM5Z"}
-	200  200
-,Control in Complete  Asset Track normal one
-)https://stage-fleet-api.vogo.tech/api/v1
-û{"latitude":"12.911965232333293","longitude":"77.65163523430478","current_km_reading":"22","image_url":"https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/8224ee18-711d-4aab-8bbb-f09b9f104ad7.jpeg","is_iot_box_working":"true","is_otp_working":"true","helmet_count":"1","is_document_available":"true","fuel_level":"6","is_vehicle_damaged":"false"}
-HTTP/1.1 200 OK
-$Date: Wed, 09 Oct 2019 08:42:14 GMT
-Content-Type: application/json
-Content-Length: 2
-Connection: keep-alive
-Server: gunicorn/19.8.1
-Allow: POST
-X-Frame-Options: SAMEORIGIN
-
-{
-    
-}
-	200  200
-5 this is the line in normal asset track please check
-,Control in Complete  Asset Track normal one
-)https://stage-fleet-api.vogo.tech/api/v1
-û{"latitude":"12.911965232333293","longitude":"77.65163523430478","current_km_reading":"22","image_url":"https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/8224ee18-711d-4aab-8bbb-f09b9f104ad7.jpeg","is_iot_box_working":"true","is_otp_working":"true","helmet_count":"1","is_document_available":"true","fuel_level":"0","is_vehicle_damaged":"false"}
-HTTP/1.1 200 OK
-$Date: Wed, 09 Oct 2019 08:42:16 GMT
-Content-Type: application/json
-Content-Length: 2
-Connection: keep-alive
-Server: gunicorn/19.8.1
-Allow: POST
-X-Frame-Options: SAMEORIGIN
-
-{
-    
-}
-	200  200
-5 this is the line in normal asset track please check
-,Control in Complete  Asset Track normal one
-)https://stage-fleet-api.vogo.tech/api/v1
-û{"latitude":"12.911965232333293","longitude":"77.65163523430478","current_km_reading":"22","image_url":"https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/8224ee18-711d-4aab-8bbb-f09b9f104ad7.jpeg","is_iot_box_working":"true","is_otp_working":"true","helmet_count":"1","is_document_available":"true","fuel_level":"0","is_vehicle_damaged":"false"}
-HTTP/1.1 200 OK
-$Date: Wed, 09 Oct 2019 08:42:18 GMT
-Content-Type: application/json
-Content-Length: 2
-Connection: keep-alive
-Server: gunicorn/19.8.1
-Allow: POST
-X-Frame-Options: SAMEORIGIN
-
-{
-    
-}
-	200  200
-5 this is the line in normal asset track please check
-0Control in InComplete  Asset Track 400 bad data
-)https://stage-fleet-api.vogo.tech/api/v1
-„{"latitude":"12.911965232333293","longitude":"77.65163523430478","current_km_reading":"47832434234","image_url":"https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/8224ee18-711d-4aab-8bbb-f09b9f104ad7.jpeg","is_iot_box_working":"true","is_otp_working":"true","helmet_count":"1","is_document_available":"true","fuel_level":"6","is_vehicle_damaged":"false"}
-	400  400
-&Control in AvailableIventoryAtStation
-)https://stage-fleet-api.vogo.tech/api/v1
-0Control in InComplete  Asset Track 400 bad data
-)https://stage-fleet-api.vogo.tech/api/v1
-ù{"latitude":"12.911965232333293","longitude":"77.65163523430478","current_km_reading":"","image_url":"https://s3.ap-south-1.amazonaws.com/test.consumer.vogo.tech/fleet/refueling/images/8224ee18-711d-4aab-8bbb-f09b9f104ad7.jpeg","is_iot_box_working":"true","is_otp_working":"true","helmet_count":"1","is_document_available":"true","fuel_level":"6","is_vehicle_damaged":"false"}
-	400  400
-&Control in AvailableIventoryAtStation
-)https://stage-fleet-api.vogo.tech/api/v1
-)40516d19401336f8efd574405fe8953629d6f3fd
-Control in Penality Details 
-)https://stage-fleet-api.vogo.tech/api/v1
-9io.restassured.internal.RestAssuredResponseImpl@32c09903
-)40516d19401336f8efd574405fe8953629d6f3fd
-Control in Penality Details 
-)https://stage-fleet-api.vogo.tech/api/v1
-9io.restassured.internal.RestAssuredResponseImpl@5ef8453e
-Control in PunchIn
-)https://stage-fleet-api.vogo.tech/api/v1
-HTTP/1.1 200 OK
-$Date: Wed, 09 Oct 2019 08:42:33 GMT
-Content-Type: application/json
-Content-Length: 137
-Connection: keep-alive
-Server: gunicorn/19.8.1
-Allow: POST
-X-Frame-Options: SAMEORIGIN
-
-{
-    "status": 2,
-4    "message": "You have successfully punched in.",
-T    "penalty": "LOP of amount 300 will get deducted for Late punchin post 120 mins"
-}
-Š{"status":2,"message":"You have successfully punched in.","penalty":"LOP of amount 300 will get deducted for Late punchin post 120 mins"}
-Control in Wrong PunchIn
-)https://stage-fleet-api.vogo.tech/api/v1
-;{"detail":"Authentication credentials were not provided."}
-Control in Wrong PunchOut
-)https://stage-fleet-api.vogo.tech/api/v1
-;{"detail":"Authentication credentials were not provided."}
- )40516d19401336f8efd574405fe8953629d6f3fd
- Control in Roaster Details 
- )https://stage-fleet-api.vogo.tech/api/v1
- 9io.restassured.internal.RestAssuredResponseImpl@60692849
-"!)40516d19401336f8efd574405fe8953629d6f3fd
-"!Control in Attendance Summary 
-"!)https://stage-fleet-api.vogo.tech/api/v1
-"!9io.restassured.internal.RestAssuredResponseImpl@47b1b06e
-"#)40516d19401336f8efd574405fe8953629d6f3fd
-"#Control in Attendance Summary 
-"#)https://stage-fleet-api.vogo.tech/api/v1
-"#9io.restassured.internal.RestAssuredResponseImpl@5fc48548
-%$)40516d19401336f8efd574405fe8953629d6f3fd
-%$Control in Stations Details 
-%$)https://stage-fleet-api.vogo.tech/api/v1
-%$9io.restassured.internal.RestAssuredResponseImpl@3e90947d
-%&)40516d19401336f8efd574405fe8953629d6f3fd
-%&1Control in Stations Details incorrect station id
-%&)https://stage-fleet-api.vogo.tech/api/v1
-%&9io.restassured.internal.RestAssuredResponseImpl@511ea9ac
-('Control in AddOvertime
-(')https://stage-fleet-api.vogo.tech/api/v1
-('HTTP/1.1 200 OK
-('$Date: Wed, 09 Oct 2019 08:42:45 GMT
-('Content-Type: application/json
-('Content-Length: 161
-('Connection: keep-alive
-('Server: gunicorn/19.8.1
-('Allow: GET, POST, PUT
-('X-Frame-Options: SAMEORIGIN
-('
-('{
-('    "id": 90,
-('    "duration_requested": 60,
-('    "duration_approved": null,
-('    "status": "requested",
-('    "user_name": " ",
-('     "station_name": "HSR WRKS",
-('-    "created_at": "2019-10-09T14:12:45+0530"
-('}
-('¢{"id":90,"duration_requested":60,"duration_approved":null,"status":"requested","user_name":" ","station_name":"HSR WRKS","created_at":"2019-10-09T14:12:45+0530"}
-('90
-('" Before setting up the property90
-('overtimeId is set
-('
-My Set 90
-(' Pre Existing "61"
-()CControl in add overtime same overtime request again gives 400 2nd 
-())https://stage-fleet-api.vogo.tech/api/v1
-(*+Control in reject AddOvertime request 3rd 
-(*)https://stage-fleet-api.vogo.tech/api/v1
-(*HTTP/1.1 200 OK
-(*$Date: Wed, 09 Oct 2019 08:42:49 GMT
-(*Content-Type: application/json
-(*Content-Length: 160
-(*Connection: keep-alive
-(*Server: gunicorn/19.8.1
-(*Allow: GET, POST, PUT
-(*X-Frame-Options: SAMEORIGIN
-(*
-(*{
-(*    "id": 90,
-(*    "duration_requested": 60,
-(*    "duration_approved": null,
-(*    "status": "rejected",
-(*    "user_name": " ",
-(*     "station_name": "HSR WRKS",
-(*-    "created_at": "2019-10-09T14:12:45+0530"
-(*}
-(*¡{"id":90,"duration_requested":60,"duration_approved":null,"status":"rejected","user_name":" ","station_name":"HSR WRKS","created_at":"2019-10-09T14:12:45+0530"}
-(+/Control in AddOvertime again post reject 4rth 
-(+)https://stage-fleet-api.vogo.tech/api/v1
-(+91
-(+ New Overtime Id post reject91
-(+91
-(+¢{"id":91,"duration_requested":60,"duration_approved":null,"status":"requested","user_name":" ","station_name":"HSR WRKS","created_at":"2019-10-09T14:12:51+0530"}
-(,5Control in change hour and approve AddOvertime  5th 
-(,)https://stage-fleet-api.vogo.tech/api/v1
-(,HTTP/1.1 200 OK
-(,$Date: Wed, 09 Oct 2019 08:42:53 GMT
-(,Content-Type: application/json
-(,Content-Length: 159
-(,Connection: keep-alive
-(,Server: gunicorn/19.8.1
-(,Allow: GET, POST, PUT
-(,X-Frame-Options: SAMEORIGIN
-(,
-(,{
-(,    "id": 91,
-(,    "duration_requested": 60,
-(,    "duration_approved": 120,
-(,    "status": "approved",
-(,    "user_name": " ",
-(,     "station_name": "HSR WRKS",
-(,-    "created_at": "2019-10-09T14:12:51+0530"
-(,}
-(, {"id":91,"duration_requested":60,"duration_approved":120,"status":"approved","user_name":" ","station_name":"HSR WRKS","created_at":"2019-10-09T14:12:51+0530"}
-(-IControl in add overtime simple approve and no hour change gives 400 6th 
-(-)https://stage-fleet-api.vogo.tech/api/v1
-(-S{"detail":"Unsupported media type \"text/plain; charset=ISO-8859-1\" in request."}

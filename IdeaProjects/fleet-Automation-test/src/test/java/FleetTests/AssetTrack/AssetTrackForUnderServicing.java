@@ -29,14 +29,11 @@ public class AssetTrackForUnderServicing {
 
             String qr_identifier=VehicleRegNumber.getvehicleqrfornonATvehicles(Constants.UnderServicing_vehicle_reg_number, Constants.UNDER_SERVICING);
 
-            //String qr_identifier=VehicleRegNumber.GetInventoryAtStation();
 
             System.out.println("qr_identifier="+qr_identifier);
             System.out.println("start writing in CSV)");
-            // ACSVwriting.writeDataLineByLineForStartingAT("/Users/vogo/IdeaProjects/fleet-Automation-test/src/main/resources/TestData/AssetTrackId.csv", VehicleRegNumber.qr_identifier);
-            ACSVwriting.writeDataLineByLineForNonATVehicles("/Users/vogo/IdeaProjects/fleet-Automation-test/src/main/resources/TestData/AssetTrackIdUnderServicing.csv",qr_identifier);
+              ACSVwriting.writeDataLineByLineForNonATVehicles("/Users/vogo/IdeaProjects/fleet-Automation-test/src/main/resources/TestData/AssetTrackIdUnderServicing.csv",qr_identifier);
             System.out.println("End writing in CSV)");
-            //return TestHelper.getDataForDataProvider("/Users/vogo/IdeaProjects/fleet-Automation-test/src/main/resources/TestData/AssetTrackBody.csv", AssetTrackForIdPojo.class);
             return TestHelper.getDataForDataProvider("/Users/vogo/IdeaProjects/fleet-Automation-test/src/main/resources/TestData/AssetTrackIdUnderServicing.csv", AssetTrackForIdUnderServicingPojo.class);
 
 
@@ -46,8 +43,7 @@ public class AssetTrackForUnderServicing {
             System.out.println("Vehicle QR is null");
             return null;
         }
-        //VehicleRegNumber.GetInventoryAtStation();
-        //VehicleRegNumber.getvehicleqr();
+
     }
 
 
@@ -76,10 +72,6 @@ public class AssetTrackForUnderServicing {
 
         String responseBody = response.asString();
         System.out.println(responseBody);
-
-
-
-
 
     }
 

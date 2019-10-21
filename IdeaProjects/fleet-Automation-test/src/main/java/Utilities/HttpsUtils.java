@@ -49,25 +49,29 @@ return headers;
            headers.put("Content-Type", "application/json");
 
            return headers;
-
        }
 
+    public HashMap<String, String> constantHeadersConsumer() {
 
-       public static String ParseJSON(String response, String AttributeName)
+        headers.put("X-App-Client","consumer-android");
+        headers.put("X-App-Version","84");
+        headers.put("Content-Type","application/json");
+
+        return headers;
+    }
+
+    public static String ParseJSON(String response, String AttributeName)
 
            {
          //  static String json = "...";
 
                JsonObject jsonObject = new JsonParser().parse(response).getAsJsonObject();
 
-              // String pageName = jsonObject.getAsJsonObject("Attributename").get("Attributename").getAsString();
+//              String pageName = jsonObject.getAsJsonObject("Attributename").get("Attributename").getAsString();
                String Value = jsonObject.get(AttributeName).getAsString();
                System.out.println(Value);
 
-//               JsonArray arr = jsonObject.getAsJsonArray("posts");
-//               for (int i = 0; i < arr.size(); i++) {
-//                   String post_id = arr.get(i).getAsJsonObject().get("post_id").getAsString();
-//                   System.out.println(post_id);
+
                return Value;
            }
 

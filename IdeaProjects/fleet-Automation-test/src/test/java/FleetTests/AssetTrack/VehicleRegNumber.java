@@ -33,6 +33,7 @@ public class VehicleRegNumber {
     private static String vehicleqr;
     private static String Kmreading;
     public static String UB_vehicle_reg_number=Constants.UnderBooking_vehicle_reg_number;
+    private static String UnderBookingvehicleqr;
 
     // @Test(priority = 1)
     public static String GetInventoryAtStation() throws Exception {
@@ -99,7 +100,7 @@ public class VehicleRegNumber {
         System.out.println("Control in AvailableIventoryAtStation");
         RestAssured.baseURI = Constants.stageFleetBaseURL;
         System.out.println(RestAssured.baseURI);
-        // System.out.println("AssetTrackBody" + AssetTrackBody);
+        // System.out.println("AssetTrackBody" + AssetTrackBody); postmn
         HttpsUtils HU = new HttpsUtils();
 
         Response response = given().
@@ -134,13 +135,6 @@ public class VehicleRegNumber {
                     //String Vehicle_registration_num = getvehiclebasedonstatus.GetVehiclesBasedOnStatus();
                     System.out.println(" this is the Kmreading you need to write CSV" + Kmreading);
 
-
-
-
-                    //} else {
-                    //  // System.out.println("This is iot vehicle");
-                    //}
-                    //vehicle_reg_number = (String) vehicleObj.get("registration_number");
 
                     break;
                 }
@@ -313,34 +307,7 @@ public class VehicleRegNumber {
 
     // @Test(priority = 1)
     public static String getvehicleqrfornonATvehicles(String NON_AT_vehicle_reg_number, String vehicleStatus) throws Exception {
- /*
-        //"/accounts/login/"
-        System.out.println("Control in AvailableIventoryAtStation");
-        RestAssured.baseURI = Constants.stageFleetBaseURL;
-        System.out.println(RestAssured.baseURI);
-        // System.out.println("AssetTrackBody" + AssetTrackBody);
-        HttpsUtils HU = new HttpsUtils();
 
-        Response response = given().
-                headers(HU.constantHeaders()).headers(HU.updateHeaders("Authorization","Token "+ VerifyOTP.AccessToken)).
-                contentType(ContentType.JSON).
-                when().
-                get("stations/" + Constants.station_id + "/vehicles/");
-        response.then();
-
-        JSONParser parser = new JSONParser();
-        JSONArray vehiclesList = (JSONArray) parser.parse(response.getBody().asString());
-        //pick a non-iot vehicle
-
-        for (int i = 0; i < vehiclesList.size(); i++)
-        {
-            JSONObject vehicleObj = (JSONObject) vehiclesList.get(i);
-            if (vehicleObj.get("is_iot_enabled").equals(false))
-            {
-                System.out.println("This is non IOT enabled vehicle" + vehicleObj.get("registration_number"));
-                vehicle_reg_number = (String) vehicleObj.get("registration_number");
-*/
-                //Vehicles_status = Vehicle_details.getvehiclestatus((String)vehicleObj.get("registration_number"));
 
                 Vehicles_status=getvehiclesdetails(NON_AT_vehicle_reg_number);
 
@@ -354,19 +321,67 @@ public class VehicleRegNumber {
                     //getvehiclesdetails(vehicle_reg_number);
                     //String Vehicle_registration_num = getvehiclebasedonstatus.GetVehiclesBasedOnStatus();
                     System.out.println(" this is the qr identifier you need to write CSV" + vehicleqr);
-
-
-
-
-
                    // break;
                 }
-
-
 
         return vehicleqr;
 
 }
+
+
+    // @Test(priority = 1)
+    public static String getUnderBookingVehicleQR() throws Exception {
+        //"/accounts/login/"
+        System.out.println("Control in AvailableIventoryAtStation");
+        RestAssured.baseURI = Constants.stageFleetBaseURL;
+        System.out.println(RestAssured.baseURI);
+        // System.out.println("AssetTrackBody" + AssetTrackBody);
+        HttpsUtils HU = new HttpsUtils();
+
+        Response response = given().
+                headers(HU.constantHeaders()).headers(HU.updateHeaders("Authorization","Token 40516d19401336f8efd574405fe8953629d6f3fd")).
+               // headers(HU.constantHeaders()).headers(HU.updateHeaders("Authorization","Token "+ VerifyOTP.AccessToken)).
+                contentType(ContentType.JSON).
+                when().
+                get("stations/" + Constants.station_id + "/vehicles/");
+        response.then().log().all();
+
+        JSONParser parser = new JSONParser();
+        System.out.println("Starting to parse the json");
+        JSONArray vehiclesList = (JSONArray)parser.parse(response.getBody().asString());
+        //pick a non-iot vehicle
+
+        for (int i = 0; i < vehiclesList.size(); i++)
+        {
+            JSONObject vehicleObj = (JSONObject) vehiclesList.get(i);
+            if (vehicleObj.get("is_iot_enabled").equals(false))
+            {
+                System.out.println("This is non IOT enabled vehicle" + vehicleObj.get("registration_number"));
+                vehicle_reg_number = (String) vehicleObj.get("registration_number");
+
+                //Vehicles_status = Vehicle_details.getvehiclestatus((String)vehicleObj.get("registration_number"));
+                Vehicles_status=getvehiclesdetails(vehicle_reg_number);
+                //Vehicleqridentifier= getvehicleqr(vehicle_reg_number);
+                System.out.println(Vehicles_status);
+                if ((Vehicles_status).equals(Constants.UNDER_BOOKING) )
+                //if ((Vehicles_status).equals(Status))
+                {
+                    UnderBookingvehicleqr= getvehicleqr(vehicle_reg_number);
+                    System.out.println( " got respective details of the vehicle :- " + vehicle_reg_number );
+                    //getvehiclesdetails(vehicle_reg_number);
+                    //String Vehicle_registration_num = getvehiclebasedonstatus.GetVehiclesBasedOnStatus();
+                    System.out.println(" this is the qr identifier you need to write CSV" + UnderBookingvehicleqr);
+
+                    break;
+                }
+
+            }
+        }
+        System.out.println("this is under booking vehicle" + UnderBookingvehicleqr);
+        return UnderBookingvehicleqr;
+
+
+    }
 }
 
 

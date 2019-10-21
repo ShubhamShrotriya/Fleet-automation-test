@@ -18,13 +18,23 @@ public class Constants {
 
     public static final String stageFleetBaseURL = "https://stage-fleet-api.vogo.tech/api/v1";
 
+    public static final String stageConsumerBaseURL = "https://stage-consumer-api.vogo.tech/api/v1";
+
     public static final String AveeshaFleetBaseURL = "https://aveesha-fleet-api.vogo.tech/api/v1";
 
     public static final String stations = "stations/";
     public static final String vehicles = "vehicles/";
 
 
+
+    public static String mobilenumber="9582323910";
+
     public static String station_id="1021";
+
+
+    public static String FleetAccessToken="40516d19401336f8efd574405fe8953629d6f3fd";
+
+    //40516d19401336f8efd574405fe8953629d6f3fd
 
 
 
